@@ -8,9 +8,23 @@ import Type.Data.Symbol (class Cons, class Equals, SProxy)
 import Unsafe.Coerce (unsafeCoerce)
 
 
-
+-- | Represents a whole Number ℤ
+-- |
+-- | Note: Pos Z and Neg Z both represent 0
 foreign import kind Int
+-- | Represents a posivite number
+-- |
+-- | ```purescript
+-- | Pos (Succ Z) ^= + 1
+-- | ```
+-- |
 foreign import data Pos :: Nat -> Int
+-- | Represents a negative number
+-- |
+-- | ```purescript
+-- | Neg (Succ Z) ^= - 1
+-- | ```
+-- |
 foreign import data Neg :: Nat -> Int
 
 data IProxy (i :: Int)
@@ -50,6 +64,12 @@ n1 :: IProxy N1
 n1 = unsafeCoerce unit
 
 class IsInt (i :: Int) where
+  -- | reflect a type-level Int to a value-level Int
+  -- |
+  -- | ```purescript
+  -- | reflectInt (undefined :: IProxy N10) = -10
+  -- | ```
+  -- |
   reflectInt :: IProxy i -> Int
 
 instance isIntPos ∷ IsNat n => IsInt (Pos n) where
@@ -89,6 +109,13 @@ plus _ _ = unsafeCoerce unit :: IProxy c
 
 -- Inverse
 
+-- | Invert the sign of a value (except for 0, which always stays positive)
+-- |
+-- | ```purescript
+-- | Inverse (Pos (Succ Z)) ~> Neg (Succ Z)
+-- | Inverse (Pos Z) ~> Pos Z
+-- | ```
+-- |
 class Inverse (a :: Int) (b :: Int) | a -> b, b -> a
 
 instance inversePosZ :: Inverse (Pos Z) (Pos Z)
@@ -124,6 +151,13 @@ prod _ _ = unsafeCoerce unit :: IProxy c
 
 -- Parsing
 
+-- | Parse a Int from a Symbol 
+-- |
+-- | ```purescript
+-- | ParseInt "-10" N10
+-- | ParseInt "1337" P1337 -- P1137 would be type alias for Pos (Succ^1337 Z)
+-- | ```
+-- |
 class ParseInt (sym :: Symbol) (int :: Int) | int -> sym, sym -> int
 
 instance parseSigned :: 
@@ -134,6 +168,12 @@ instance parseSigned ::
    , ParseNat numberSymbol natValue
    ) => ParseInt sym int
 
-
+-- | parse Int a Value-Level
+-- |
+-- | ```purescript
+-- | parseInt (undefined :: SProxy "-1337") N1337 
+-- | 	-- N1137 would be type alias for Neg (Succ^1337 Z)
+-- | ```
+-- |
 parseInt :: ∀a sym. ParseInt sym a => SProxy sym -> IProxy a
 parseInt _ = unsafeCoerce unit

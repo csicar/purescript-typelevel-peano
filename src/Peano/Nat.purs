@@ -8,10 +8,14 @@ import Unsafe.Coerce (unsafeCoerce)
 
 -- Nat
 
+-- | Represents a non-negative whole Number ℕ₀
 foreign import kind Nat
+-- | Represents 0
 foreign import data Z :: Nat
+-- | Represents Successor of a Nat: `(Succ a) ^= 1 + a`
 foreign import data Succ :: Nat -> Nat
 
+-- | Proxy from kind Nat to kind Type
 data NProxy (n :: Nat)
 
 type D0  = Z
@@ -28,6 +32,12 @@ type D10 = Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
 
 
 class IsNat (a :: Nat) where
+  -- | reflect typelevel Nat to a valuelevel Int
+  -- |
+  -- |
+  -- | ```purescript
+  -- | reflectNat (undefined :: NProxy D10) = 10
+  -- | ```
   reflectNat :: NProxy a -> Int
 
 instance isNatZ ∷ IsNat Z where
@@ -42,6 +52,7 @@ instance showZ ∷ IsNat a => Show (NProxy a) where
 
 -- Addition
 
+-- | a + b = c
 class SumNat (a :: Nat) (b :: Nat) (c :: Nat) | a b -> c
 
 instance addZ ∷ SumNat a Z a
@@ -55,6 +66,7 @@ plusNat _ _ = unsafeCoerce unit :: NProxy c
 
 -- Product
 
+-- | a * b = c
 class ProductNat (a :: Nat) (b :: Nat) (c :: Nat) | a b -> c
 
 --| 0 * a = 0
@@ -84,6 +96,13 @@ instance compareSucc ∷ CompareNat a b ord => CompareNat (Succ a) (Succ b) ord
 
 -- Parse
 
+-- | Parses a Nat from a Symbol
+-- |
+-- | ```purescript
+-- | ParseNat "2" ~> (Succ (Succ Z))
+-- | ParseNat "1283" ~> (Succ (...))
+-- | ```
+-- |
 class ParseNat (sym :: Symbol) (nat :: Nat) | nat -> sym, sym -> nat
 
 instance parseLit0 :: ParseNat "0" Z
@@ -107,7 +126,12 @@ else
 instance parseLit9 :: ParseNat "9" (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
 else
 instance parseCons :: (ParseNat head msd, Symbol.Cons head tail sym, ProductNat msd D10 high, ParseNat tail lower, SumNat high lower res) => ParseNat sym res
--- instance parseCons :: (ParseNumber head msd, Symbol.Cons head tail sym, Product (Pos msd) P10 high, ParseNumber tail lower, Sum high (Pos lower) (Pos res)) => ParseNumber sym res
 
+-- | value-level parse of number
+-- |
+-- | ```purescript
+-- | parseNat (SProxy "10") ~> D10
+-- | ```
+-- |
 parseNat :: ∀a sym. ParseNat sym a => SProxy sym -> NProxy a
 parseNat _ = unsafeCoerce unit
