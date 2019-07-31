@@ -1,0 +1,24 @@
+{
+	"name": "purescript-typelevel-peano",
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"output"
+	],
+	"repository": {
+		"url": "https://github.com/csicar/purescript-typelevel-peano",
+		"type": "git"
+	},
+	"dependencies": {
+		"purescript-prelude": "^4.1.1",
+		"purescript-typelevel-prelude": "^5.0.0",
+		"purescript-console": "^4.2.0",
+		"purescript-effect": "^2.0.1",
+		"purescript-arrays": ">2.0.0"
+	},
+	"devDependencies": {
+		"purescript-psci-support": "^4.0.0"
+	}
+}
