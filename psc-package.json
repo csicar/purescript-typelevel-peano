@@ -1,0 +1,14 @@
+{
+  "name": "purescript-typelevel-numbers",
+  "set": "psc-0.13.2",
+  "source": "https://github.com/purescript/package-sets.git",
+  "depends": [
+    "console",
+    "effect",
+    "prelude",
+    "psci-support",
+    "typelevel-prelude",
+    "arrays",
+    "unsafe-coerce"
+  ]
+}
