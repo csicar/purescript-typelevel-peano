@@ -19,16 +19,16 @@ foreign import data Succ :: Nat -> Nat
 data NProxy (n :: Nat)
 
 type D0  = Z
-type D1  = Succ Z
-type D2  = Succ (Succ Z)
-type D3  = Succ (Succ (Succ Z))
-type D4  = Succ (Succ (Succ (Succ Z)))
-type D5  = Succ (Succ (Succ (Succ (Succ Z))))
-type D6  = Succ (Succ (Succ (Succ (Succ (Succ Z)))))
-type D7  = Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))
-type D8  = Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))
-type D9  = Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))))
-type D10 = Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
+type D1  = Succ D0
+type D2  = Succ D1
+type D3  = Succ D2
+type D4  = Succ D3
+type D5  = Succ D4
+type D6  = Succ D5
+type D7  = Succ D6
+type D8  = Succ D7
+type D9  = Succ D8
+type D10 = Succ D9
 
 
 class IsNat (a :: Nat) where
