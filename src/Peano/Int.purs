@@ -3,7 +3,7 @@ module Type.Data.Peano.Int where
 import Prelude
 
 import Type.Data.Boolean (class If)
-import Type.Data.Peano.Nat (class IsNat, class ParseNat, NProxy, Succ, Z, reflectNat, kind Nat)
+import Type.Data.Peano.Nat (class IsNat, class ParseNat, NProxy, Succ, Z, D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, reflectNat, kind Nat)
 import Type.Data.Symbol (class Cons, class Equals, SProxy)
 import Unsafe.Coerce (unsafeCoerce)
 
@@ -30,29 +30,29 @@ foreign import data Neg :: Nat -> Int
 data IProxy (i :: Int)
 
 
-type P0  = Pos Z
-type P1  = Pos (Succ Z)
-type P2  = Pos (Succ (Succ Z))
-type P3  = Pos (Succ (Succ (Succ Z)))
-type P4  = Pos (Succ (Succ (Succ (Succ Z))))
-type P5  = Pos (Succ (Succ (Succ (Succ (Succ Z)))))
-type P6  = Pos (Succ (Succ (Succ (Succ (Succ (Succ Z))))))
-type P7  = Pos (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))
-type P8  = Pos (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))))
-type P9  = Pos (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
-type P10 = Pos (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))))))
+type P0  = Pos D0
+type P1  = Pos D1
+type P2  = Pos D2
+type P3  = Pos D3
+type P4  = Pos D4
+type P5  = Pos D5
+type P6  = Pos D6
+type P7  = Pos D7
+type P8  = Pos D8
+type P9  = Pos D9
+type P10 = Pos D10
 
-type N0  = Neg Z
-type N1  = Neg (Succ Z)
-type N2  = Neg (Succ (Succ Z))
-type N3  = Neg (Succ (Succ (Succ Z)))
-type N4  = Neg (Succ (Succ (Succ (Succ Z))))
-type N5  = Neg (Succ (Succ (Succ (Succ (Succ Z)))))
-type N6  = Neg (Succ (Succ (Succ (Succ (Succ (Succ Z))))))
-type N7  = Neg (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))
-type N8  = Neg (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))))
-type N9  = Neg (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
-type N10 = Neg (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))))))
+type N0  = Neg D0
+type N1  = Neg D1
+type N2  = Neg D2
+type N3  = Neg D3
+type N4  = Neg D4
+type N5  = Neg D5
+type N6  = Neg D6
+type N7  = Neg D7
+type N8  = Neg D8
+type N9  = Neg D9
+type N10 = Neg D10
 
 p0 :: IProxy P0
 p0 = unsafeCoerce unit
