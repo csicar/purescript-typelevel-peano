@@ -1,4 +1,5 @@
-module Type.Data.Peano.Nat where
+module Type.Data.Peano.Nat.Definition where
+  
 
 import Prelude (class Show, show, unit, ($), (+))
 import Prim.Symbol as Symbol
@@ -17,19 +18,6 @@ foreign import data Succ :: Nat -> Nat
 
 -- | Proxy from kind Nat to kind Type
 data NProxy (n :: Nat)
-
-type D0  = Z
-type D1  = Succ Z
-type D2  = Succ (Succ Z)
-type D3  = Succ (Succ (Succ Z))
-type D4  = Succ (Succ (Succ (Succ Z)))
-type D5  = Succ (Succ (Succ (Succ (Succ Z))))
-type D6  = Succ (Succ (Succ (Succ (Succ (Succ Z)))))
-type D7  = Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))
-type D8  = Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))
-type D9  = Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))))
-type D10 = Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
-
 
 class IsNat (a :: Nat) where
   -- | reflect typelevel Nat to a valuelevel Int
@@ -92,46 +80,3 @@ else
 instance compareZ' ∷ CompareNat a Z GT
 else
 instance compareSucc ∷ CompareNat a b ord => CompareNat (Succ a) (Succ b) ord
-
-
--- Parse
-
--- | Parses a Nat from a Symbol
--- |
--- | ```purescript
--- | ParseNat "2" ~> (Succ (Succ Z))
--- | ParseNat "1283" ~> (Succ (...))
--- | ```
--- |
-class ParseNat (sym :: Symbol) (nat :: Nat) | nat -> sym, sym -> nat
-
-instance parseLit0 :: ParseNat "0" Z
-else
-instance parseLit1 :: ParseNat "1" (Succ Z)
-else
-instance parseLit2 :: ParseNat "2" (Succ (Succ Z))
-else
-instance parseLit3 :: ParseNat "3" (Succ (Succ (Succ Z)))
-else
-instance parseLit4 :: ParseNat "4" (Succ (Succ (Succ (Succ Z))))
-else
-instance parseLit5 :: ParseNat "5" (Succ (Succ (Succ (Succ (Succ Z)))))
-else
-instance parseLit6 :: ParseNat "6" (Succ (Succ (Succ (Succ (Succ (Succ Z))))))
-else
-instance parseLit7 :: ParseNat "7" (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))
-else
-instance parseLit8 :: ParseNat "8" (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))))
-else
-instance parseLit9 :: ParseNat "9" (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
-else
-instance parseCons :: (ParseNat head msd, Symbol.Cons head tail sym, ProductNat msd D10 high, ParseNat tail lower, SumNat high lower res) => ParseNat sym res
-
--- | value-level parse of number
--- |
--- | ```purescript
--- | parseNat (SProxy "10") ~> D10
--- | ```
--- |
-parseNat :: ∀a sym. ParseNat sym a => SProxy sym -> NProxy a
-parseNat _ = unsafeCoerce unit
