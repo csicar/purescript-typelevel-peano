@@ -2,7 +2,7 @@ module Type.Data.Peano.Nat.Parse where
 
 import Prelude (unit)
 import Type.Data.Peano.Nat.Definition (class ProductNat, class SumNat, NProxy, Succ, Z, kind Nat)
-import Type.Data.Peano.Nat.Aliases (D10)
+import Type.Data.Peano.Nat.TypeAliases (D10)
 
 import Data.Symbol (SProxy)
 import Prim (kind Symbol)

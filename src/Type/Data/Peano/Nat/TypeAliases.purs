@@ -1,4 +1,4 @@
-module Type.Data.Peano.Nat.Aliases where
+module Type.Data.Peano.Nat.TypeAliases where
 
 import Prelude
 
