@@ -2,8 +2,7 @@ module Type.Data.Peano.Nat.Definition where
   
 
 import Prelude (class Show, show, unit, ($), (+))
-import Prim.Symbol as Symbol
-import Type.Prelude (SProxy, kind Ordering, EQ, LT, GT)
+import Type.Prelude (EQ, GT, LT, kind Ordering)
 import Unsafe.Coerce (unsafeCoerce)
 
 
