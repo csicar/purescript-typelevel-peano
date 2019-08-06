@@ -1,17 +1,16 @@
 module Type.Data.Peano.Nat.Definition where
-  
 
 import Prelude (class Show, show, unit, ($), (+))
 import Type.Prelude (EQ, GT, LT, kind Ordering, kind Boolean, True, False)
 import Unsafe.Coerce (unsafeCoerce)
 
-
 -- Nat
-
 -- | Represents a non-negative whole Number ℕ₀
 foreign import kind Nat
+
 -- | Represents 0
 foreign import data Z :: Nat
+
 -- | Represents Successor of a Nat: `(Succ a) ^= 1 + a`
 foreign import data Succ :: Nat -> Nat
 
@@ -36,23 +35,18 @@ instance isNatSucc ∷ IsNat a => IsNat (Succ a) where
 instance showZ ∷ IsNat a => Show (NProxy a) where
   show a = show $ reflectNat (unsafeCoerce unit :: NProxy a)
 
-
 -- Addition
-
 -- | a + b = c
 class SumNat (a :: Nat) (b :: Nat) (c :: Nat) | a b -> c
 
 instance addZ ∷ SumNat a Z a
-else
-instance addZ' ∷ SumNat Z a a
-else
-instance addSucc :: SumNat a b c => SumNat (Succ a) b (Succ c)
+else instance addZ' ∷ SumNat Z a a
+else instance addSucc :: SumNat a b c => SumNat (Succ a) b (Succ c)
 
-plusNat :: ∀a b c. SumNat a b c => NProxy a -> NProxy b -> NProxy c
+plusNat :: ∀ a b c. SumNat a b c => NProxy a -> NProxy b -> NProxy c
 plusNat _ _ = unsafeCoerce unit :: NProxy c
 
 -- Product
-
 -- | a * b = c
 class ProductNat (a :: Nat) (b :: Nat) (c :: Nat) | a b -> c
 
@@ -61,28 +55,23 @@ instance productZ' :: ProductNat Z a Z
 
 --| 1 * a = a
 instance product1' ∷ ProductNat (Succ Z) a a
-else
---| (1 + a) * b = b + a * b
+else --| (1 + a) * b = b + a * b
 instance productSucc :: (ProductNat a b ab, SumNat ab b result) => ProductNat (Succ a) b result
 
-mulNat :: ∀a b c. ProductNat a b c => NProxy a -> NProxy b -> NProxy c
+mulNat :: ∀ a b c. ProductNat a b c => NProxy a -> NProxy b -> NProxy c
 mulNat _ _ = unsafeCoerce unit :: NProxy c
 
 -- Compare
-
 class CompareNat (a :: Nat) (b :: Nat) (ord :: Ordering) | a b -> ord
 
 instance compareSame :: CompareNat a a EQ
-else
-instance compareZ :: CompareNat Z a LT
-else
-instance compareZ' ∷ CompareNat a Z GT
-else
-instance compareSucc ∷ CompareNat a b ord => CompareNat (Succ a) (Succ b) ord
+else instance compareZ :: CompareNat Z a LT
+else instance compareZ' ∷ CompareNat a Z GT
+else instance compareSucc ∷ CompareNat a b ord => CompareNat (Succ a) (Succ b) ord
 
 -- Is Zero
-
 class IsZeroNat (a :: Nat) (isZero :: Boolean) | a -> isZero
 
 instance isZeroZ :: IsZeroNat Z True
+
 instance isZeroSucc :: IsZeroNat (Succ a) False
