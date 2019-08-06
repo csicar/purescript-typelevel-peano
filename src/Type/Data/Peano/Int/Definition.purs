@@ -4,6 +4,8 @@ module Type.Data.Peano.Int.Definition where
 import Prelude
 
 import Type.Data.Peano.Nat (class IsNat, NProxy, Succ, Z, reflectNat, kind Nat)
+import Type.Data.Peano.Nat.Definition (class IsZeroNat)
+import Type.Prelude (kind Boolean, True, False)
 import Unsafe.Coerce (unsafeCoerce)
 
 
@@ -112,3 +114,10 @@ instance productSucc :: (ProductInt (Pos a) b ab, SumInt ab b result) => Product
 
 prod :: ∀a b c. ProductInt a b c => IProxy a -> IProxy b -> IProxy c
 prod _ _ = unsafeCoerce unit :: IProxy c
+
+
+-- Is Zero
+class IsZeroInt (int :: Int) (isZero :: Boolean) | int -> isZero
+
+instance isZeroPos :: (IsZeroNat a isZero) => IsZeroInt (Pos a) isZero
+instance isZeroNeg :: (IsZeroNat a isZero) => IsZeroInt (Neg a) isZero

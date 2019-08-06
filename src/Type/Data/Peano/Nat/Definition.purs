@@ -2,7 +2,7 @@ module Type.Data.Peano.Nat.Definition where
   
 
 import Prelude (class Show, show, unit, ($), (+))
-import Type.Prelude (EQ, GT, LT, kind Ordering)
+import Type.Prelude (EQ, GT, LT, kind Ordering, kind Boolean, True, False)
 import Unsafe.Coerce (unsafeCoerce)
 
 
@@ -79,3 +79,10 @@ else
 instance compareZ' ∷ CompareNat a Z GT
 else
 instance compareSucc ∷ CompareNat a b ord => CompareNat (Succ a) (Succ b) ord
+
+-- Is Zero
+
+class IsZeroNat (a :: Nat) (isZero :: Boolean) | a -> isZero
+
+instance isZeroZ :: IsZeroNat Z True
+instance isZeroSucc :: IsZeroNat (Succ a) False
