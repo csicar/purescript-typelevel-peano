@@ -3,7 +3,7 @@ module Type.Data.Peano.Int.Definition where
 import Prelude
 import Type.Data.Peano.Nat (class IsNat, NProxy, Succ, Z, reflectNat, kind Nat)
 import Type.Data.Peano.Nat.Definition (class IsZeroNat)
-import Type.Prelude (kind Boolean, True, False)
+import Type.Prelude (kind Boolean)
 import Unsafe.Coerce (unsafeCoerce)
 
 -- | Represents a whole Number ℤ
