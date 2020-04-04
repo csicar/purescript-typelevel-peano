@@ -15,7 +15,7 @@ foreign import data Z :: Nat
 foreign import data Succ :: Nat -> Nat
 
 -- | Proxy from kind Nat to kind Type
-data NProxy (n :: Nat)
+data NProxy (n :: Nat) = NProxy
 
 class IsNat (a :: Nat) where
   -- | reflect typelevel Nat to a valuelevel Int
@@ -55,11 +55,27 @@ instance productZ' :: ProductNat Z a Z
 
 --| 1 * a = a
 instance product1' ∷ ProductNat (Succ Z) a a
-else --| (1 + a) * b = b + a * b
+else 
+--| (1 + a) * b = b + a * b
 instance productSucc :: (ProductNat a b ab, SumNat ab b result) => ProductNat (Succ a) b result
 
 mulNat :: ∀ a b c. ProductNat a b c => NProxy a -> NProxy b -> NProxy c
 mulNat _ _ = unsafeCoerce unit :: NProxy c
+
+-- Exponentiation
+class Exponentiation (a :: Nat) (b :: Nat) (c :: Nat) | a b -> c
+
+instance exponentiationZ :: Exponentiation a Z (Succ Z)
+
+instance exponentiationSucc :: (Exponentiation a b ab, ProductNat ab a result) => Exponentiation a (Succ b) result
+
+--| ```purescript
+--| > powNat d2 d3
+--| 8 -- : NProxy D8
+--| ```
+-- | a raised to the power of b `a^b = c`
+powNat :: ∀a b c. Exponentiation a b c => NProxy a -> NProxy b -> NProxy c
+powNat _ _ = NProxy :: NProxy c
 
 -- Compare
 class CompareNat (a :: Nat) (b :: Nat) (ord :: Ordering) | a b -> ord

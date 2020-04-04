@@ -2,11 +2,11 @@ module Test.Main where
 
 import Prelude
 
-import Data.Symbol (SProxy)
+import Data.Symbol (SProxy(..))
 import Effect (Effect)
 import Effect.Console (log, logShow)
 import Type.Data.Peano.Int (IProxy, N2, N4, Neg, P1, P10, P4, P8, Pos, n1, p1, parseInt, plus, prod, reflectInt)
-import Type.Data.Peano.Nat (D0, D1, D10, D2, D3, D4, D5, D9, NProxy, Succ, Z, mulNat, parseNat, plusNat)
+import Type.Data.Peano.Nat (D0, D1, D10, D2, D3, D4, D5, D6, D64, D9, NProxy(..), Succ, Z, D100, mulNat, parseNat, plusNat, powNat)
 import Unsafe.Coerce (unsafeCoerce)
 
 undefined :: ∀a. a
@@ -78,10 +78,10 @@ t11 :: IProxy (Pos (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (
 t11 = t10 `prod` t10
 
 t12 :: IProxy (Pos (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
-t12 = parseInt (undefined :: SProxy "64")
+t12 = parseInt (SProxy :: SProxy "64")
 
 t13 :: IProxy P10
-t13 = parseInt (undefined :: SProxy "10")
+t13 = parseInt (SProxy :: SProxy "10")
 
 t14 :: IProxy N2
 t14 = n1 `prod` two
@@ -93,43 +93,47 @@ t15 :: IProxy P4
 t15 = minusTwo `prod` minusTwo
 
 t16 :: IProxy N2
-t16 = parseInt (undefined :: SProxy "-2")
+t16 = parseInt (SProxy :: SProxy "-2")
 
 t17 :: IProxy N4
-t17 = parseInt (undefined :: SProxy "-4")
+t17 = parseInt (SProxy :: SProxy "-4")
 
 t18 :: NProxy D3
-t18 = parseNat (undefined :: SProxy "3")
+t18 = parseNat (SProxy :: SProxy "3")
 
 t19 :: NProxy D9
-t19 = parseNat (undefined :: SProxy "9")
+t19 = parseNat (SProxy :: SProxy "9")
 
 t20 :: NProxy D10
-t20 = (undefined :: NProxy D0) `plusNat` (undefined :: NProxy D10)
+t20 = (NProxy :: NProxy D0) `plusNat` (NProxy :: NProxy D10)
 
 t22 :: NProxy D10
-t22 = plusNat (undefined :: NProxy D5) (undefined :: NProxy D5)
+t22 = plusNat (NProxy :: NProxy D5) (NProxy :: NProxy D5)
 
 t23 :: NProxy D10
-t23 = parseNat (undefined :: SProxy "10")
+t23 = parseNat (SProxy :: SProxy "10")
 
 t24 :: NProxy D10
-t24 = (undefined :: NProxy D10) `plusNat` (undefined :: NProxy D0)
+t24 = (NProxy :: NProxy D10) `plusNat` (NProxy :: NProxy D0)
 
 t24' :: NProxy D10
-t24' = (undefined :: NProxy D0) `plusNat` (undefined :: NProxy D10)
+t24' = (NProxy :: NProxy D0) `plusNat` (NProxy :: NProxy D10)
 
 t25 :: NProxy D4
-t25 = (undefined :: NProxy D2) `mulNat` (undefined :: NProxy D2)
+t25 = (NProxy :: NProxy D2) `mulNat` (NProxy :: NProxy D2)
 
 t26 :: NProxy D2
-t26 = (undefined :: NProxy D1) `mulNat` (undefined :: NProxy D2)
+t26 = (NProxy :: NProxy D1) `mulNat` (NProxy :: NProxy D2)
 
+t27 :: NProxy D64
+t27 = (NProxy :: NProxy D2) `powNat` (NProxy :: NProxy D6)
+
+t28 :: NProxy D100
+t28 = parseNat (SProxy :: SProxy "100")
 
 main :: Effect Unit
 main = do
   logShow t26
   logShow (reflectInt t12)
-  logShow (undefined :: NProxy D10)
+  logShow (NProxy :: NProxy D10)
   logShow t12
-  log "You should add some tests."

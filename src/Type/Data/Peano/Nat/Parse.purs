@@ -1,13 +1,24 @@
 module Type.Data.Peano.Nat.Parse where
 
 import Prelude (unit)
-import Type.Data.Peano.Nat.Definition (class ProductNat, class SumNat, NProxy, Succ, Z, kind Nat)
+import Type.Data.Peano.Nat.Definition (class ProductNat, class SumNat, class Exponentiation, NProxy(..), Succ, Z, kind Nat)
 import Type.Data.Peano.Nat.TypeAliases (D10)
 
 import Data.Symbol (SProxy)
 import Prim (kind Symbol)
 import Prim.Symbol as Symbol
 import Unsafe.Coerce (unsafeCoerce)
+
+
+class Length (sym :: Symbol) (nat :: Nat) | sym -> nat
+
+instance length0 :: Length "" Z
+else
+instance lengthCons :: (Symbol.Cons head tail sym, Length tail tailLength) => Length sym (Succ tailLength)
+
+length :: ∀a b. Length a b => SProxy a -> NProxy b
+length _ = NProxy
+
 
 -- Parse
 
@@ -40,7 +51,18 @@ instance parseLit8 :: ParseNat "8" (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Su
 else
 instance parseLit9 :: ParseNat "9" (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
 else
-instance parseCons :: (ParseNat head msd, Symbol.Cons head tail sym, ProductNat msd D10 high, ParseNat tail lower, SumNat high lower res) => ParseNat sym res
+-- head : tail
+-- 
+instance parseCons :: 
+  ( ParseNat head msd
+  , Symbol.Cons head tail sym
+  , Length tail symLength
+  , Exponentiation D10 symLength offset
+  , ProductNat offset msd high
+  , ParseNat tail lower
+  , SumNat high lower res
+  ) => ParseNat sym res
+
 
 -- | value-level parse of number
 -- |
