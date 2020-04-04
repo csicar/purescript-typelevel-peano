@@ -4,25 +4,20 @@ import Prelude
 
 import Data.Symbol (SProxy(..))
 import Effect (Effect)
-import Effect.Console (log, logShow)
-import Type.Data.Peano.Int (IProxy, N2, N4, Neg, P1, P10, P4, P8, Pos, n1, p1, parseInt, plus, prod, reflectInt)
-import Type.Data.Peano.Nat (D0, D1, D10, D2, D3, D4, D5, D6, D64, D9, NProxy(..), Succ, Z, D100, mulNat, parseNat, plusNat, powNat)
-import Unsafe.Coerce (unsafeCoerce)
-
-undefined :: ∀a. a
-undefined = unsafeCoerce unit
+import Effect.Console (logShow)
+import Type.Data.Peano (D0, D1, D10, D100, D2, D3, D4, D5, D6, D64, D9, IProxy(..), N2, N4, NProxy(..), Neg, P1, P10, P4, P8, Pos, Succ, Z, mulNat, n1, p1, parseInt, parseNat, plus, plusNat, powNat, prod, reflectInt)
 
 two :: IProxy (Pos (Succ (Succ Z)))
-two = undefined
+two = IProxy
 
 three :: IProxy (Pos (Succ (Succ (Succ Z))))
-three = undefined
+three = IProxy
 
 minusTwo :: IProxy (Neg (Succ (Succ Z)))
-minusTwo = undefined
+minusTwo = IProxy
 
 minusZero :: IProxy (Neg Z)
-minusZero = undefined
+minusZero = IProxy
 
 -- Test Add
 

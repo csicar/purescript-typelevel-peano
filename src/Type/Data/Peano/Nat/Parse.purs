@@ -1,7 +1,7 @@
 module Type.Data.Peano.Nat.Parse where
 
 import Prelude (unit)
-import Type.Data.Peano.Nat.Definition (class ProductNat, class SumNat, class Exponentiation, NProxy(..), Succ, Z, kind Nat)
+import Type.Data.Peano.Nat.Definition (class ProductNat, class SumNat, class ExponentiationNat, NProxy(..), Succ, Z, kind Nat)
 import Type.Data.Peano.Nat.TypeAliases (D10)
 
 import Data.Symbol (SProxy)
@@ -57,7 +57,7 @@ instance parseCons ::
   ( ParseNat head msd
   , Symbol.Cons head tail sym
   , Length tail symLength
-  , Exponentiation D10 symLength offset
+  , ExponentiationNat D10 symLength offset
   , ProductNat offset msd high
   , ParseNat tail lower
   , SumNat high lower res

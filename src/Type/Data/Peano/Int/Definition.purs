@@ -27,7 +27,7 @@ foreign import data Pos :: Nat -> Int
 -- |
 foreign import data Neg :: Nat -> Int
 
-data IProxy (i :: Int)
+data IProxy (i :: Int) = IProxy
 
 class IsInt (i :: Int) where
   -- | reflect a type-level Int to a value-level Int

@@ -63,18 +63,18 @@ mulNat :: ∀ a b c. ProductNat a b c => NProxy a -> NProxy b -> NProxy c
 mulNat _ _ = unsafeCoerce unit :: NProxy c
 
 -- Exponentiation
-class Exponentiation (a :: Nat) (b :: Nat) (c :: Nat) | a b -> c
+class ExponentiationNat (a :: Nat) (b :: Nat) (c :: Nat) | a b -> c
 
-instance exponentiationZ :: Exponentiation a Z (Succ Z)
+instance exponentiationZ :: ExponentiationNat a Z (Succ Z)
 
-instance exponentiationSucc :: (Exponentiation a b ab, ProductNat ab a result) => Exponentiation a (Succ b) result
+instance exponentiationSucc :: (ExponentiationNat a b ab, ProductNat ab a result) => ExponentiationNat a (Succ b) result
 
 --| ```purescript
 --| > powNat d2 d3
 --| 8 -- : NProxy D8
 --| ```
 -- | a raised to the power of b `a^b = c`
-powNat :: ∀a b c. Exponentiation a b c => NProxy a -> NProxy b -> NProxy c
+powNat :: ∀a b c. ExponentiationNat a b c => NProxy a -> NProxy b -> NProxy c
 powNat _ _ = NProxy :: NProxy c
 
 -- Compare
