@@ -91,3 +91,13 @@ class IsZeroNat (a :: Nat) (isZero :: Boolean) | a -> isZero
 instance isZeroZ :: IsZeroNat Z True
 
 instance isZeroSucc :: IsZeroNat (Succ a) False
+
+
+-- Predecesor
+
+class Pred (a :: Nat) (b :: Nat) | a -> b, b -> a
+
+instance predOfSucc ∷ Pred (Succ a) a
+
+pred :: ∀a.  (NProxy (Succ a)) -> NProxy a
+pred _ = NProxy :: NProxy a
