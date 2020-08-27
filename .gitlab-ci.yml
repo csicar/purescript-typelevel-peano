@@ -1,0 +1,20 @@
+image: registry.gitlab.com/csicar/docker-purescript
+
+cache:
+  paths:
+    - .spago
+    - output
+
+build:
+  script:
+    - spago build
+
+test:
+  script:
+    - ls
+    - spago test
+
+
+stages:
+  - build
+  - test
