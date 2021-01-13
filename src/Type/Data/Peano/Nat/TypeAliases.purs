@@ -1,7 +1,8 @@
 module Type.Data.Peano.Nat.TypeAliases where
 
 
-import Type.Data.Peano.Nat.Definition (NProxy(..), Succ, Z)
+import Type.Data.Peano.Nat.Definition (Succ, Z)
+import Type.Proxy (Proxy(..))
 
 
 type D0  = Z
@@ -106,305 +107,305 @@ type D98 = Succ D97
 type D99 = Succ D98
 type D100 = Succ D99
 
-d0 :: NProxy D0
-d0 = NProxy
+d0 :: Proxy D0
+d0 = Proxy
 
-d1 :: NProxy D1
-d1 = NProxy
+d1 :: Proxy D1
+d1 = Proxy
 
-d2 :: NProxy D2
-d2 = NProxy
+d2 :: Proxy D2
+d2 = Proxy
 
-d3 :: NProxy D3
-d3 = NProxy
+d3 :: Proxy D3
+d3 = Proxy
 
-d4 :: NProxy D4
-d4 = NProxy
+d4 :: Proxy D4
+d4 = Proxy
 
-d5 :: NProxy D5
-d5 = NProxy
+d5 :: Proxy D5
+d5 = Proxy
 
-d6 :: NProxy D6
-d6 = NProxy
+d6 :: Proxy D6
+d6 = Proxy
 
-d7 :: NProxy D7
-d7 = NProxy
+d7 :: Proxy D7
+d7 = Proxy
 
-d8 :: NProxy D8
-d8 = NProxy
+d8 :: Proxy D8
+d8 = Proxy
 
-d9 :: NProxy D9
-d9 = NProxy
+d9 :: Proxy D9
+d9 = Proxy
 
-d10 :: NProxy D10
-d10 = NProxy
+d10 :: Proxy D10
+d10 = Proxy
 
-d11 :: NProxy D11
-d11 = NProxy
+d11 :: Proxy D11
+d11 = Proxy
 
-d12 :: NProxy D12
-d12 = NProxy
+d12 :: Proxy D12
+d12 = Proxy
 
-d13 :: NProxy D13
-d13 = NProxy
+d13 :: Proxy D13
+d13 = Proxy
 
-d14 :: NProxy D14
-d14 = NProxy
+d14 :: Proxy D14
+d14 = Proxy
 
-d15 :: NProxy D15
-d15 = NProxy
+d15 :: Proxy D15
+d15 = Proxy
 
-d16 :: NProxy D16
-d16 = NProxy
+d16 :: Proxy D16
+d16 = Proxy
 
-d17 :: NProxy D17
-d17 = NProxy
+d17 :: Proxy D17
+d17 = Proxy
 
-d18 :: NProxy D18
-d18 = NProxy
+d18 :: Proxy D18
+d18 = Proxy
 
-d19 :: NProxy D19
-d19 = NProxy
+d19 :: Proxy D19
+d19 = Proxy
 
-d20 :: NProxy D20
-d20 = NProxy
+d20 :: Proxy D20
+d20 = Proxy
 
-d21 :: NProxy D21
-d21 = NProxy
+d21 :: Proxy D21
+d21 = Proxy
 
-d22 :: NProxy D22
-d22 = NProxy
+d22 :: Proxy D22
+d22 = Proxy
 
-d23 :: NProxy D23
-d23 = NProxy
+d23 :: Proxy D23
+d23 = Proxy
 
-d24 :: NProxy D24
-d24 = NProxy
+d24 :: Proxy D24
+d24 = Proxy
 
-d25 :: NProxy D25
-d25 = NProxy
+d25 :: Proxy D25
+d25 = Proxy
 
-d26 :: NProxy D26
-d26 = NProxy
+d26 :: Proxy D26
+d26 = Proxy
 
-d27 :: NProxy D27
-d27 = NProxy
+d27 :: Proxy D27
+d27 = Proxy
 
-d28 :: NProxy D28
-d28 = NProxy
+d28 :: Proxy D28
+d28 = Proxy
 
-d29 :: NProxy D29
-d29 = NProxy
+d29 :: Proxy D29
+d29 = Proxy
 
-d30 :: NProxy D30
-d30 = NProxy
+d30 :: Proxy D30
+d30 = Proxy
 
-d31 :: NProxy D31
-d31 = NProxy
+d31 :: Proxy D31
+d31 = Proxy
 
-d32 :: NProxy D32
-d32 = NProxy
+d32 :: Proxy D32
+d32 = Proxy
 
-d33 :: NProxy D33
-d33 = NProxy
+d33 :: Proxy D33
+d33 = Proxy
 
-d34 :: NProxy D34
-d34 = NProxy
+d34 :: Proxy D34
+d34 = Proxy
 
-d35 :: NProxy D35
-d35 = NProxy
+d35 :: Proxy D35
+d35 = Proxy
 
-d36 :: NProxy D36
-d36 = NProxy
+d36 :: Proxy D36
+d36 = Proxy
 
-d37 :: NProxy D37
-d37 = NProxy
+d37 :: Proxy D37
+d37 = Proxy
 
-d38 :: NProxy D38
-d38 = NProxy
+d38 :: Proxy D38
+d38 = Proxy
 
-d39 :: NProxy D39
-d39 = NProxy
+d39 :: Proxy D39
+d39 = Proxy
 
-d40 :: NProxy D40
-d40 = NProxy
+d40 :: Proxy D40
+d40 = Proxy
 
-d41 :: NProxy D41
-d41 = NProxy
+d41 :: Proxy D41
+d41 = Proxy
 
-d42 :: NProxy D42
-d42 = NProxy
+d42 :: Proxy D42
+d42 = Proxy
 
-d43 :: NProxy D43
-d43 = NProxy
+d43 :: Proxy D43
+d43 = Proxy
 
-d44 :: NProxy D44
-d44 = NProxy
+d44 :: Proxy D44
+d44 = Proxy
 
-d45 :: NProxy D45
-d45 = NProxy
+d45 :: Proxy D45
+d45 = Proxy
 
-d46 :: NProxy D46
-d46 = NProxy
+d46 :: Proxy D46
+d46 = Proxy
 
-d47 :: NProxy D47
-d47 = NProxy
+d47 :: Proxy D47
+d47 = Proxy
 
-d48 :: NProxy D48
-d48 = NProxy
+d48 :: Proxy D48
+d48 = Proxy
 
-d49 :: NProxy D49
-d49 = NProxy
+d49 :: Proxy D49
+d49 = Proxy
 
-d50 :: NProxy D50
-d50 = NProxy
+d50 :: Proxy D50
+d50 = Proxy
 
-d51 :: NProxy D51
-d51 = NProxy
+d51 :: Proxy D51
+d51 = Proxy
 
-d52 :: NProxy D52
-d52 = NProxy
+d52 :: Proxy D52
+d52 = Proxy
 
-d53 :: NProxy D53
-d53 = NProxy
+d53 :: Proxy D53
+d53 = Proxy
 
-d54 :: NProxy D54
-d54 = NProxy
+d54 :: Proxy D54
+d54 = Proxy
 
-d55 :: NProxy D55
-d55 = NProxy
+d55 :: Proxy D55
+d55 = Proxy
 
-d56 :: NProxy D56
-d56 = NProxy
+d56 :: Proxy D56
+d56 = Proxy
 
-d57 :: NProxy D57
-d57 = NProxy
+d57 :: Proxy D57
+d57 = Proxy
 
-d58 :: NProxy D58
-d58 = NProxy
+d58 :: Proxy D58
+d58 = Proxy
 
-d59 :: NProxy D59
-d59 = NProxy
+d59 :: Proxy D59
+d59 = Proxy
 
-d60 :: NProxy D60
-d60 = NProxy
+d60 :: Proxy D60
+d60 = Proxy
 
-d61 :: NProxy D61
-d61 = NProxy
+d61 :: Proxy D61
+d61 = Proxy
 
-d62 :: NProxy D62
-d62 = NProxy
+d62 :: Proxy D62
+d62 = Proxy
 
-d63 :: NProxy D63
-d63 = NProxy
+d63 :: Proxy D63
+d63 = Proxy
 
-d64 :: NProxy D64
-d64 = NProxy
+d64 :: Proxy D64
+d64 = Proxy
 
-d65 :: NProxy D65
-d65 = NProxy
+d65 :: Proxy D65
+d65 = Proxy
 
-d66 :: NProxy D66
-d66 = NProxy
+d66 :: Proxy D66
+d66 = Proxy
 
-d67 :: NProxy D67
-d67 = NProxy
+d67 :: Proxy D67
+d67 = Proxy
 
-d68 :: NProxy D68
-d68 = NProxy
+d68 :: Proxy D68
+d68 = Proxy
 
-d69 :: NProxy D69
-d69 = NProxy
+d69 :: Proxy D69
+d69 = Proxy
 
-d70 :: NProxy D70
-d70 = NProxy
+d70 :: Proxy D70
+d70 = Proxy
 
-d71 :: NProxy D71
-d71 = NProxy
+d71 :: Proxy D71
+d71 = Proxy
 
-d72 :: NProxy D72
-d72 = NProxy
+d72 :: Proxy D72
+d72 = Proxy
 
-d73 :: NProxy D73
-d73 = NProxy
+d73 :: Proxy D73
+d73 = Proxy
 
-d74 :: NProxy D74
-d74 = NProxy
+d74 :: Proxy D74
+d74 = Proxy
 
-d75 :: NProxy D75
-d75 = NProxy
+d75 :: Proxy D75
+d75 = Proxy
 
-d76 :: NProxy D76
-d76 = NProxy
+d76 :: Proxy D76
+d76 = Proxy
 
-d77 :: NProxy D77
-d77 = NProxy
+d77 :: Proxy D77
+d77 = Proxy
 
-d78 :: NProxy D78
-d78 = NProxy
+d78 :: Proxy D78
+d78 = Proxy
 
-d79 :: NProxy D79
-d79 = NProxy
+d79 :: Proxy D79
+d79 = Proxy
 
-d80 :: NProxy D80
-d80 = NProxy
+d80 :: Proxy D80
+d80 = Proxy
 
-d81 :: NProxy D81
-d81 = NProxy
+d81 :: Proxy D81
+d81 = Proxy
 
-d82 :: NProxy D82
-d82 = NProxy
+d82 :: Proxy D82
+d82 = Proxy
 
-d83 :: NProxy D83
-d83 = NProxy
+d83 :: Proxy D83
+d83 = Proxy
 
-d84 :: NProxy D84
-d84 = NProxy
+d84 :: Proxy D84
+d84 = Proxy
 
-d85 :: NProxy D85
-d85 = NProxy
+d85 :: Proxy D85
+d85 = Proxy
 
-d86 :: NProxy D86
-d86 = NProxy
+d86 :: Proxy D86
+d86 = Proxy
 
-d87 :: NProxy D87
-d87 = NProxy
+d87 :: Proxy D87
+d87 = Proxy
 
-d88 :: NProxy D88
-d88 = NProxy
+d88 :: Proxy D88
+d88 = Proxy
 
-d89 :: NProxy D89
-d89 = NProxy
+d89 :: Proxy D89
+d89 = Proxy
 
-d90 :: NProxy D90
-d90 = NProxy
+d90 :: Proxy D90
+d90 = Proxy
 
-d91 :: NProxy D91
-d91 = NProxy
+d91 :: Proxy D91
+d91 = Proxy
 
-d92 :: NProxy D92
-d92 = NProxy
+d92 :: Proxy D92
+d92 = Proxy
 
-d93 :: NProxy D93
-d93 = NProxy
+d93 :: Proxy D93
+d93 = Proxy
 
-d94 :: NProxy D94
-d94 = NProxy
+d94 :: Proxy D94
+d94 = Proxy
 
-d95 :: NProxy D95
-d95 = NProxy
+d95 :: Proxy D95
+d95 = Proxy
 
-d96 :: NProxy D96
-d96 = NProxy
+d96 :: Proxy D96
+d96 = Proxy
 
-d97 :: NProxy D97
-d97 = NProxy
+d97 :: Proxy D97
+d97 = Proxy
 
-d98 :: NProxy D98
-d98 = NProxy
+d98 :: Proxy D98
+d98 = Proxy
 
-d99 :: NProxy D99
-d99 = NProxy
+d99 :: Proxy D99
+d99 = Proxy
 
-d100 :: NProxy D100
-d100 = NProxy
+d100 :: Proxy D100
+d100 = Proxy

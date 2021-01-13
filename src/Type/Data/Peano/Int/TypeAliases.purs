@@ -2,8 +2,9 @@ module Type.Data.Peano.Int.TypeAliases where
 
 import Type.Data.Peano.Nat.TypeAliases (D0, D1, D10, D100, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D3, D30, D31, D32, D33, D34, D35, D36, D37, D38, D39, D4, D40, D41, D42, D43, D44, D45, D46, D47, D48, D49, D5, D50, D51, D52, D53, D54, D55, D56, D57, D58, D59, D6, D60, D61, D62, D63, D64, D65, D66, D67, D68, D69, D7, D70, D71, D72, D73, D74, D75, D76, D77, D78, D79, D8, D80, D81, D82, D83, D84, D85, D86, D87, D88, D89, D9, D90, D91, D92, D93, D94, D95, D96, D97, D98, D99)
 
-import Type.Data.Peano.Int.Definition (IProxy(..), Neg, Pos)
+import Type.Data.Peano.Int.Definition (Neg, Pos)
 
+import Type.Proxy (Proxy(..))
 
 type P0  = Pos D0
 type P1  = Pos D1
@@ -107,308 +108,308 @@ type P98 = Pos D98
 type P99 = Pos D99
 type P100 = Pos D100
 
-p0 :: IProxy P0
-p0 = IProxy
+p0 :: Proxy P0
+p0 = Proxy
 
-p1 :: IProxy P1
-p1 = IProxy
+p1 :: Proxy P1
+p1 = Proxy
 
-p2 :: IProxy P2
-p2 = IProxy
+p2 :: Proxy P2
+p2 = Proxy
 
-p3 :: IProxy P3
-p3 = IProxy
+p3 :: Proxy P3
+p3 = Proxy
 
-p4 :: IProxy P4
-p4 = IProxy
+p4 :: Proxy P4
+p4 = Proxy
 
-p5 :: IProxy P5
-p5 = IProxy
+p5 :: Proxy P5
+p5 = Proxy
 
-p6 :: IProxy P6
-p6 = IProxy
+p6 :: Proxy P6
+p6 = Proxy
 
-p7 :: IProxy P7
-p7 = IProxy
+p7 :: Proxy P7
+p7 = Proxy
 
-p8 :: IProxy P8
-p8 = IProxy
+p8 :: Proxy P8
+p8 = Proxy
 
-p9 :: IProxy P9
-p9 = IProxy
+p9 :: Proxy P9
+p9 = Proxy
 
-p10 :: IProxy P10
-p10 = IProxy
+p10 :: Proxy P10
+p10 = Proxy
 
-p11 :: IProxy P11
-p11 = IProxy
+p11 :: Proxy P11
+p11 = Proxy
 
-p12 :: IProxy P12
-p12 = IProxy
+p12 :: Proxy P12
+p12 = Proxy
 
-p13 :: IProxy P13
-p13 = IProxy
+p13 :: Proxy P13
+p13 = Proxy
 
-p14 :: IProxy P14
-p14 = IProxy
+p14 :: Proxy P14
+p14 = Proxy
 
-p15 :: IProxy P15
-p15 = IProxy
+p15 :: Proxy P15
+p15 = Proxy
 
-p16 :: IProxy P16
-p16 = IProxy
+p16 :: Proxy P16
+p16 = Proxy
 
-p17 :: IProxy P17
-p17 = IProxy
+p17 :: Proxy P17
+p17 = Proxy
 
-p18 :: IProxy P18
-p18 = IProxy
+p18 :: Proxy P18
+p18 = Proxy
 
-p19 :: IProxy P19
-p19 = IProxy
+p19 :: Proxy P19
+p19 = Proxy
 
-p20 :: IProxy P20
-p20 = IProxy
+p20 :: Proxy P20
+p20 = Proxy
 
-p21 :: IProxy P21
-p21 = IProxy
+p21 :: Proxy P21
+p21 = Proxy
 
-p22 :: IProxy P22
-p22 = IProxy
+p22 :: Proxy P22
+p22 = Proxy
 
-p23 :: IProxy P23
-p23 = IProxy
+p23 :: Proxy P23
+p23 = Proxy
 
-p24 :: IProxy P24
-p24 = IProxy
+p24 :: Proxy P24
+p24 = Proxy
 
-p25 :: IProxy P25
-p25 = IProxy
+p25 :: Proxy P25
+p25 = Proxy
 
-p26 :: IProxy P26
-p26 = IProxy
+p26 :: Proxy P26
+p26 = Proxy
 
-p27 :: IProxy P27
-p27 = IProxy
+p27 :: Proxy P27
+p27 = Proxy
 
-p28 :: IProxy P28
-p28 = IProxy
+p28 :: Proxy P28
+p28 = Proxy
 
-p29 :: IProxy P29
-p29 = IProxy
+p29 :: Proxy P29
+p29 = Proxy
 
-p30 :: IProxy P30
-p30 = IProxy
+p30 :: Proxy P30
+p30 = Proxy
 
-p31 :: IProxy P31
-p31 = IProxy
+p31 :: Proxy P31
+p31 = Proxy
 
-p32 :: IProxy P32
-p32 = IProxy
+p32 :: Proxy P32
+p32 = Proxy
 
-p33 :: IProxy P33
-p33 = IProxy
+p33 :: Proxy P33
+p33 = Proxy
 
-p34 :: IProxy P34
-p34 = IProxy
+p34 :: Proxy P34
+p34 = Proxy
 
-p35 :: IProxy P35
-p35 = IProxy
+p35 :: Proxy P35
+p35 = Proxy
 
-p36 :: IProxy P36
-p36 = IProxy
+p36 :: Proxy P36
+p36 = Proxy
 
-p37 :: IProxy P37
-p37 = IProxy
+p37 :: Proxy P37
+p37 = Proxy
 
-p38 :: IProxy P38
-p38 = IProxy
+p38 :: Proxy P38
+p38 = Proxy
 
-p39 :: IProxy P39
-p39 = IProxy
+p39 :: Proxy P39
+p39 = Proxy
 
-p40 :: IProxy P40
-p40 = IProxy
+p40 :: Proxy P40
+p40 = Proxy
 
-p41 :: IProxy P41
-p41 = IProxy
+p41 :: Proxy P41
+p41 = Proxy
 
-p42 :: IProxy P42
-p42 = IProxy
+p42 :: Proxy P42
+p42 = Proxy
 
-p43 :: IProxy P43
-p43 = IProxy
+p43 :: Proxy P43
+p43 = Proxy
 
-p44 :: IProxy P44
-p44 = IProxy
+p44 :: Proxy P44
+p44 = Proxy
 
-p45 :: IProxy P45
-p45 = IProxy
+p45 :: Proxy P45
+p45 = Proxy
 
-p46 :: IProxy P46
-p46 = IProxy
+p46 :: Proxy P46
+p46 = Proxy
 
-p47 :: IProxy P47
-p47 = IProxy
+p47 :: Proxy P47
+p47 = Proxy
 
-p48 :: IProxy P48
-p48 = IProxy
+p48 :: Proxy P48
+p48 = Proxy
 
-p49 :: IProxy P49
-p49 = IProxy
+p49 :: Proxy P49
+p49 = Proxy
 
-p50 :: IProxy P50
-p50 = IProxy
+p50 :: Proxy P50
+p50 = Proxy
 
-p51 :: IProxy P51
-p51 = IProxy
+p51 :: Proxy P51
+p51 = Proxy
 
-p52 :: IProxy P52
-p52 = IProxy
+p52 :: Proxy P52
+p52 = Proxy
 
-p53 :: IProxy P53
-p53 = IProxy
+p53 :: Proxy P53
+p53 = Proxy
 
-p54 :: IProxy P54
-p54 = IProxy
+p54 :: Proxy P54
+p54 = Proxy
 
-p55 :: IProxy P55
-p55 = IProxy
+p55 :: Proxy P55
+p55 = Proxy
 
-p56 :: IProxy P56
-p56 = IProxy
+p56 :: Proxy P56
+p56 = Proxy
 
-p57 :: IProxy P57
-p57 = IProxy
+p57 :: Proxy P57
+p57 = Proxy
 
-p58 :: IProxy P58
-p58 = IProxy
+p58 :: Proxy P58
+p58 = Proxy
 
-p59 :: IProxy P59
-p59 = IProxy
+p59 :: Proxy P59
+p59 = Proxy
 
-p60 :: IProxy P60
-p60 = IProxy
+p60 :: Proxy P60
+p60 = Proxy
 
-p61 :: IProxy P61
-p61 = IProxy
+p61 :: Proxy P61
+p61 = Proxy
 
-p62 :: IProxy P62
-p62 = IProxy
+p62 :: Proxy P62
+p62 = Proxy
 
-p63 :: IProxy P63
-p63 = IProxy
+p63 :: Proxy P63
+p63 = Proxy
 
-p64 :: IProxy P64
-p64 = IProxy
+p64 :: Proxy P64
+p64 = Proxy
 
-p65 :: IProxy P65
-p65 = IProxy
+p65 :: Proxy P65
+p65 = Proxy
 
-p66 :: IProxy P66
-p66 = IProxy
+p66 :: Proxy P66
+p66 = Proxy
 
-p67 :: IProxy P67
-p67 = IProxy
+p67 :: Proxy P67
+p67 = Proxy
 
-p68 :: IProxy P68
-p68 = IProxy
+p68 :: Proxy P68
+p68 = Proxy
 
-p69 :: IProxy P69
-p69 = IProxy
+p69 :: Proxy P69
+p69 = Proxy
 
-p70 :: IProxy P70
-p70 = IProxy
+p70 :: Proxy P70
+p70 = Proxy
 
-p71 :: IProxy P71
-p71 = IProxy
+p71 :: Proxy P71
+p71 = Proxy
 
-p72 :: IProxy P72
-p72 = IProxy
+p72 :: Proxy P72
+p72 = Proxy
 
-p73 :: IProxy P73
-p73 = IProxy
+p73 :: Proxy P73
+p73 = Proxy
 
-p74 :: IProxy P74
-p74 = IProxy
+p74 :: Proxy P74
+p74 = Proxy
 
-p75 :: IProxy P75
-p75 = IProxy
+p75 :: Proxy P75
+p75 = Proxy
 
-p76 :: IProxy P76
-p76 = IProxy
+p76 :: Proxy P76
+p76 = Proxy
 
-p77 :: IProxy P77
-p77 = IProxy
+p77 :: Proxy P77
+p77 = Proxy
 
-p78 :: IProxy P78
-p78 = IProxy
+p78 :: Proxy P78
+p78 = Proxy
 
-p79 :: IProxy P79
-p79 = IProxy
+p79 :: Proxy P79
+p79 = Proxy
 
-p80 :: IProxy P80
-p80 = IProxy
+p80 :: Proxy P80
+p80 = Proxy
 
-p81 :: IProxy P81
-p81 = IProxy
+p81 :: Proxy P81
+p81 = Proxy
 
-p82 :: IProxy P82
-p82 = IProxy
+p82 :: Proxy P82
+p82 = Proxy
 
-p83 :: IProxy P83
-p83 = IProxy
+p83 :: Proxy P83
+p83 = Proxy
 
-p84 :: IProxy P84
-p84 = IProxy
+p84 :: Proxy P84
+p84 = Proxy
 
-p85 :: IProxy P85
-p85 = IProxy
+p85 :: Proxy P85
+p85 = Proxy
 
-p86 :: IProxy P86
-p86 = IProxy
+p86 :: Proxy P86
+p86 = Proxy
 
-p87 :: IProxy P87
-p87 = IProxy
+p87 :: Proxy P87
+p87 = Proxy
 
-p88 :: IProxy P88
-p88 = IProxy
+p88 :: Proxy P88
+p88 = Proxy
 
-p89 :: IProxy P89
-p89 = IProxy
+p89 :: Proxy P89
+p89 = Proxy
 
-p90 :: IProxy P90
-p90 = IProxy
+p90 :: Proxy P90
+p90 = Proxy
 
-p91 :: IProxy P91
-p91 = IProxy
+p91 :: Proxy P91
+p91 = Proxy
 
-p92 :: IProxy P92
-p92 = IProxy
+p92 :: Proxy P92
+p92 = Proxy
 
-p93 :: IProxy P93
-p93 = IProxy
+p93 :: Proxy P93
+p93 = Proxy
 
-p94 :: IProxy P94
-p94 = IProxy
+p94 :: Proxy P94
+p94 = Proxy
 
-p95 :: IProxy P95
-p95 = IProxy
+p95 :: Proxy P95
+p95 = Proxy
 
-p96 :: IProxy P96
-p96 = IProxy
+p96 :: Proxy P96
+p96 = Proxy
 
-p97 :: IProxy P97
-p97 = IProxy
+p97 :: Proxy P97
+p97 = Proxy
 
-p98 :: IProxy P98
-p98 = IProxy
+p98 :: Proxy P98
+p98 = Proxy
 
-p99 :: IProxy P99
-p99 = IProxy
+p99 :: Proxy P99
+p99 = Proxy
 
-p100 :: IProxy P100
-p100 = IProxy
+p100 :: Proxy P100
+p100 = Proxy
 
 
 type N0  = Neg D0
@@ -514,305 +515,305 @@ type N99 = Neg D99
 type N100 = Neg D100
 
 
-n0 :: IProxy N0
-n0 = IProxy
+n0 :: Proxy N0
+n0 = Proxy
 
-n1 :: IProxy N1
-n1 = IProxy
+n1 :: Proxy N1
+n1 = Proxy
 
-n2 :: IProxy N2
-n2 = IProxy
+n2 :: Proxy N2
+n2 = Proxy
 
-n3 :: IProxy N3
-n3 = IProxy
+n3 :: Proxy N3
+n3 = Proxy
 
-n4 :: IProxy N4
-n4 = IProxy
+n4 :: Proxy N4
+n4 = Proxy
 
-n5 :: IProxy N5
-n5 = IProxy
+n5 :: Proxy N5
+n5 = Proxy
 
-n6 :: IProxy N6
-n6 = IProxy
+n6 :: Proxy N6
+n6 = Proxy
 
-n7 :: IProxy N7
-n7 = IProxy
+n7 :: Proxy N7
+n7 = Proxy
 
-n8 :: IProxy N8
-n8 = IProxy
+n8 :: Proxy N8
+n8 = Proxy
 
-n9 :: IProxy N9
-n9 = IProxy
+n9 :: Proxy N9
+n9 = Proxy
 
-n10 :: IProxy N10
-n10 = IProxy
+n10 :: Proxy N10
+n10 = Proxy
 
-n11 :: IProxy N11
-n11 = IProxy
+n11 :: Proxy N11
+n11 = Proxy
 
-n12 :: IProxy N12
-n12 = IProxy
+n12 :: Proxy N12
+n12 = Proxy
 
-n13 :: IProxy N13
-n13 = IProxy
+n13 :: Proxy N13
+n13 = Proxy
 
-n14 :: IProxy N14
-n14 = IProxy
+n14 :: Proxy N14
+n14 = Proxy
 
-n15 :: IProxy N15
-n15 = IProxy
+n15 :: Proxy N15
+n15 = Proxy
 
-n16 :: IProxy N16
-n16 = IProxy
+n16 :: Proxy N16
+n16 = Proxy
 
-n17 :: IProxy N17
-n17 = IProxy
+n17 :: Proxy N17
+n17 = Proxy
 
-n18 :: IProxy N18
-n18 = IProxy
+n18 :: Proxy N18
+n18 = Proxy
 
-n19 :: IProxy N19
-n19 = IProxy
+n19 :: Proxy N19
+n19 = Proxy
 
-n20 :: IProxy N20
-n20 = IProxy
+n20 :: Proxy N20
+n20 = Proxy
 
-n21 :: IProxy N21
-n21 = IProxy
+n21 :: Proxy N21
+n21 = Proxy
 
-n22 :: IProxy N22
-n22 = IProxy
+n22 :: Proxy N22
+n22 = Proxy
 
-n23 :: IProxy N23
-n23 = IProxy
+n23 :: Proxy N23
+n23 = Proxy
 
-n24 :: IProxy N24
-n24 = IProxy
+n24 :: Proxy N24
+n24 = Proxy
 
-n25 :: IProxy N25
-n25 = IProxy
+n25 :: Proxy N25
+n25 = Proxy
 
-n26 :: IProxy N26
-n26 = IProxy
+n26 :: Proxy N26
+n26 = Proxy
 
-n27 :: IProxy N27
-n27 = IProxy
+n27 :: Proxy N27
+n27 = Proxy
 
-n28 :: IProxy N28
-n28 = IProxy
+n28 :: Proxy N28
+n28 = Proxy
 
-n29 :: IProxy N29
-n29 = IProxy
+n29 :: Proxy N29
+n29 = Proxy
 
-n30 :: IProxy N30
-n30 = IProxy
+n30 :: Proxy N30
+n30 = Proxy
 
-n31 :: IProxy N31
-n31 = IProxy
+n31 :: Proxy N31
+n31 = Proxy
 
-n32 :: IProxy N32
-n32 = IProxy
+n32 :: Proxy N32
+n32 = Proxy
 
-n33 :: IProxy N33
-n33 = IProxy
+n33 :: Proxy N33
+n33 = Proxy
 
-n34 :: IProxy N34
-n34 = IProxy
+n34 :: Proxy N34
+n34 = Proxy
 
-n35 :: IProxy N35
-n35 = IProxy
+n35 :: Proxy N35
+n35 = Proxy
 
-n36 :: IProxy N36
-n36 = IProxy
+n36 :: Proxy N36
+n36 = Proxy
 
-n37 :: IProxy N37
-n37 = IProxy
+n37 :: Proxy N37
+n37 = Proxy
 
-n38 :: IProxy N38
-n38 = IProxy
+n38 :: Proxy N38
+n38 = Proxy
 
-n39 :: IProxy N39
-n39 = IProxy
+n39 :: Proxy N39
+n39 = Proxy
 
-n40 :: IProxy N40
-n40 = IProxy
+n40 :: Proxy N40
+n40 = Proxy
 
-n41 :: IProxy N41
-n41 = IProxy
+n41 :: Proxy N41
+n41 = Proxy
 
-n42 :: IProxy N42
-n42 = IProxy
+n42 :: Proxy N42
+n42 = Proxy
 
-n43 :: IProxy N43
-n43 = IProxy
+n43 :: Proxy N43
+n43 = Proxy
 
-n44 :: IProxy N44
-n44 = IProxy
+n44 :: Proxy N44
+n44 = Proxy
 
-n45 :: IProxy N45
-n45 = IProxy
+n45 :: Proxy N45
+n45 = Proxy
 
-n46 :: IProxy N46
-n46 = IProxy
+n46 :: Proxy N46
+n46 = Proxy
 
-n47 :: IProxy N47
-n47 = IProxy
+n47 :: Proxy N47
+n47 = Proxy
 
-n48 :: IProxy N48
-n48 = IProxy
+n48 :: Proxy N48
+n48 = Proxy
 
-n49 :: IProxy N49
-n49 = IProxy
+n49 :: Proxy N49
+n49 = Proxy
 
-n50 :: IProxy N50
-n50 = IProxy
+n50 :: Proxy N50
+n50 = Proxy
 
-n51 :: IProxy N51
-n51 = IProxy
+n51 :: Proxy N51
+n51 = Proxy
 
-n52 :: IProxy N52
-n52 = IProxy
+n52 :: Proxy N52
+n52 = Proxy
 
-n53 :: IProxy N53
-n53 = IProxy
+n53 :: Proxy N53
+n53 = Proxy
 
-n54 :: IProxy N54
-n54 = IProxy
+n54 :: Proxy N54
+n54 = Proxy
 
-n55 :: IProxy N55
-n55 = IProxy
+n55 :: Proxy N55
+n55 = Proxy
 
-n56 :: IProxy N56
-n56 = IProxy
+n56 :: Proxy N56
+n56 = Proxy
 
-n57 :: IProxy N57
-n57 = IProxy
+n57 :: Proxy N57
+n57 = Proxy
 
-n58 :: IProxy N58
-n58 = IProxy
+n58 :: Proxy N58
+n58 = Proxy
 
-n59 :: IProxy N59
-n59 = IProxy
+n59 :: Proxy N59
+n59 = Proxy
 
-n60 :: IProxy N60
-n60 = IProxy
+n60 :: Proxy N60
+n60 = Proxy
 
-n61 :: IProxy N61
-n61 = IProxy
+n61 :: Proxy N61
+n61 = Proxy
 
-n62 :: IProxy N62
-n62 = IProxy
+n62 :: Proxy N62
+n62 = Proxy
 
-n63 :: IProxy N63
-n63 = IProxy
+n63 :: Proxy N63
+n63 = Proxy
 
-n64 :: IProxy N64
-n64 = IProxy
+n64 :: Proxy N64
+n64 = Proxy
 
-n65 :: IProxy N65
-n65 = IProxy
+n65 :: Proxy N65
+n65 = Proxy
 
-n66 :: IProxy N66
-n66 = IProxy
+n66 :: Proxy N66
+n66 = Proxy
 
-n67 :: IProxy N67
-n67 = IProxy
+n67 :: Proxy N67
+n67 = Proxy
 
-n68 :: IProxy N68
-n68 = IProxy
+n68 :: Proxy N68
+n68 = Proxy
 
-n69 :: IProxy N69
-n69 = IProxy
+n69 :: Proxy N69
+n69 = Proxy
 
-n70 :: IProxy N70
-n70 = IProxy
+n70 :: Proxy N70
+n70 = Proxy
 
-n71 :: IProxy N71
-n71 = IProxy
+n71 :: Proxy N71
+n71 = Proxy
 
-n72 :: IProxy N72
-n72 = IProxy
+n72 :: Proxy N72
+n72 = Proxy
 
-n73 :: IProxy N73
-n73 = IProxy
+n73 :: Proxy N73
+n73 = Proxy
 
-n74 :: IProxy N74
-n74 = IProxy
+n74 :: Proxy N74
+n74 = Proxy
 
-n75 :: IProxy N75
-n75 = IProxy
+n75 :: Proxy N75
+n75 = Proxy
 
-n76 :: IProxy N76
-n76 = IProxy
+n76 :: Proxy N76
+n76 = Proxy
 
-n77 :: IProxy N77
-n77 = IProxy
+n77 :: Proxy N77
+n77 = Proxy
 
-n78 :: IProxy N78
-n78 = IProxy
+n78 :: Proxy N78
+n78 = Proxy
 
-n79 :: IProxy N79
-n79 = IProxy
+n79 :: Proxy N79
+n79 = Proxy
 
-n80 :: IProxy N80
-n80 = IProxy
+n80 :: Proxy N80
+n80 = Proxy
 
-n81 :: IProxy N81
-n81 = IProxy
+n81 :: Proxy N81
+n81 = Proxy
 
-n82 :: IProxy N82
-n82 = IProxy
+n82 :: Proxy N82
+n82 = Proxy
 
-n83 :: IProxy N83
-n83 = IProxy
+n83 :: Proxy N83
+n83 = Proxy
 
-n84 :: IProxy N84
-n84 = IProxy
+n84 :: Proxy N84
+n84 = Proxy
 
-n85 :: IProxy N85
-n85 = IProxy
+n85 :: Proxy N85
+n85 = Proxy
 
-n86 :: IProxy N86
-n86 = IProxy
+n86 :: Proxy N86
+n86 = Proxy
 
-n87 :: IProxy N87
-n87 = IProxy
+n87 :: Proxy N87
+n87 = Proxy
 
-n88 :: IProxy N88
-n88 = IProxy
+n88 :: Proxy N88
+n88 = Proxy
 
-n89 :: IProxy N89
-n89 = IProxy
+n89 :: Proxy N89
+n89 = Proxy
 
-n90 :: IProxy N90
-n90 = IProxy
+n90 :: Proxy N90
+n90 = Proxy
 
-n91 :: IProxy N91
-n91 = IProxy
+n91 :: Proxy N91
+n91 = Proxy
 
-n92 :: IProxy N92
-n92 = IProxy
+n92 :: Proxy N92
+n92 = Proxy
 
-n93 :: IProxy N93
-n93 = IProxy
+n93 :: Proxy N93
+n93 = Proxy
 
-n94 :: IProxy N94
-n94 = IProxy
+n94 :: Proxy N94
+n94 = Proxy
 
-n95 :: IProxy N95
-n95 = IProxy
+n95 :: Proxy N95
+n95 = Proxy
 
-n96 :: IProxy N96
-n96 = IProxy
+n96 :: Proxy N96
+n96 = Proxy
 
-n97 :: IProxy N97
-n97 = IProxy
+n97 :: Proxy N97
+n97 = Proxy
 
-n98 :: IProxy N98
-n98 = IProxy
+n98 :: Proxy N98
+n98 = Proxy
 
-n99 :: IProxy N99
-n99 = IProxy
+n99 :: Proxy N99
+n99 = Proxy
 
-n100 :: IProxy N100
-n100 = IProxy
+n100 :: Proxy N100
+n100 = Proxy
