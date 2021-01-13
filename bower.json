@@ -12,13 +12,13 @@
 		"type": "git"
 	},
 	"dependencies": {
-		"purescript-prelude": "^4.1.1",
-		"purescript-typelevel-prelude": "^5.0.0",
-		"purescript-console": "^4.2.0",
-		"purescript-effect": "^2.0.1",
-		"purescript-arrays": ">2.0.0"
+		"purescript-prelude": "master",
+		"purescript-typelevel-prelude": "master",
+		"purescript-console": "master",
+		"purescript-effect": "master",
+		"purescript-arrays": "master"
 	},
 	"devDependencies": {
-		"purescript-psci-support": "^4.0.0"
+		"purescript-psci-support": "master"
 	}
 }
