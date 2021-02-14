@@ -1,6 +1,6 @@
 module Type.Data.Peano.Nat.Definition where
 
-import Prelude (unit, (+))
+import Prelude (show, unit, (+), (<<<))
 import Type.Prelude (EQ, GT, LT, Ordering, True, False)
 import Type.Proxy (Proxy(..))
 import Unsafe.Coerce (unsafeCoerce)
@@ -29,6 +29,9 @@ instance isNatZ ∷ IsNat Z where
 
 instance isNatSucc ∷ IsNat a => IsNat (Succ a) where
   reflectNat _ = 1 + (reflectNat (unsafeCoerce unit :: Proxy a))
+
+showNat :: forall n. IsNat n => Proxy n -> Prim.String
+showNat = show <<< reflectNat
 
 -- Addition
 -- | a + b = c

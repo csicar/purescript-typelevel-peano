@@ -40,9 +40,11 @@ class IsInt (i :: Int) where
 instance isIntPos ∷ IsNat n => IsInt (Pos n) where
   reflectInt _ = reflectNat (unsafeCoerce unit :: Proxy n)
 
-
 instance isIntNeg :: IsNat n => IsInt (Neg n) where
   reflectInt _ = -reflectNat (unsafeCoerce unit :: Proxy n)
+
+showInt :: forall i. IsInt i => Proxy i -> Prim.String
+showInt = show <<< reflectInt
 
 -- Addition
 class SumInt (a :: Int) (b :: Int) (c :: Int) | a b -> c
