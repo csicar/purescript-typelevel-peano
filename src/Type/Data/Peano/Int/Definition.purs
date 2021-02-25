@@ -1,15 +1,15 @@
 module Type.Data.Peano.Int.Definition where
 
 import Prelude
-import Type.Data.Peano.Nat (class IsNat, NProxy, Succ, Z, reflectNat, kind Nat)
+import Type.Data.Peano.Nat (class IsNat, Succ, Z, reflectNat, Nat)
 import Type.Data.Peano.Nat.Definition (class IsZeroNat)
-import Type.Prelude (kind Boolean)
+import Prim as Prim
 import Unsafe.Coerce (unsafeCoerce)
 
 -- | Represents a whole Number ℤ
 -- |
 -- | Note: Pos Z and Neg Z both represent 0
-foreign import kind Int
+data Int
 
 -- | Represents a posivite number
 -- |
@@ -33,19 +33,23 @@ class IsInt (i :: Int) where
   -- | reflect a type-level Int to a value-level Int
   -- |
   -- | ```purescript
-  -- | reflectInt (undefined :: IProxy N10) = -10
+  -- | reflectInt (Proxy  :: _ N10) = -10
+  -- | reflectInt (IProxy :: _ N10) = -10
   -- | ```
   -- |
-  reflectInt :: IProxy i -> Int
+  reflectInt :: forall proxy. proxy i -> Prim.Int
 
 instance isIntPos ∷ IsNat n => IsInt (Pos n) where
-  reflectInt _ = reflectNat (unsafeCoerce unit :: NProxy n)
+  reflectInt _ = reflectNat (unsafeCoerce unit :: _ n)
 
 instance isIntNeg :: IsNat n => IsInt (Neg n) where
-  reflectInt _ = -reflectNat (unsafeCoerce unit :: NProxy n)
+  reflectInt _ = -reflectNat (unsafeCoerce unit :: _ n)
 
-instance showInt ∷ IsInt i => Show (IProxy i) where
-  show _ = show $ reflectInt (unsafeCoerce unit :: IProxy i)
+instance showIProxy :: IsInt i => Show (IProxy i) where
+  show = show <<< reflectInt
+
+showInt :: forall proxy i. IsInt i => proxy i -> Prim.String
+showInt = show <<< reflectInt
 
 -- Addition
 class SumInt (a :: Int) (b :: Int) (c :: Int) | a b -> c
@@ -72,8 +76,8 @@ instance minusZ :: SumInt (Pos a) (Neg Z) (Pos a)
 
 instance minusZ' :: SumInt (Neg Z) (Pos a) (Pos a)
 
-plus :: ∀ a b c. SumInt a b c => IProxy a -> IProxy b -> IProxy c
-plus _ _ = unsafeCoerce unit :: IProxy c
+plus :: ∀ proxy a b c. SumInt a b c => proxy a -> proxy b -> proxy c
+plus _ _ = unsafeCoerce unit
 
 -- Inverse
 -- | Invert the sign of a value (except for 0, which always stays positive)
@@ -103,11 +107,11 @@ else instance productNegPos :: ProductInt (Pos a) (Pos b) (Pos c) => ProductInt 
 else -- (1 + a) * b = b + (a * b)
 instance productSucc :: (ProductInt (Pos a) b ab, SumInt ab b result) => ProductInt (Pos (Succ a)) b result
 
-prod :: ∀ a b c. ProductInt a b c => IProxy a -> IProxy b -> IProxy c
-prod _ _ = unsafeCoerce unit :: IProxy c
+prod :: ∀ proxy a b c. ProductInt a b c => proxy a -> proxy b -> proxy c
+prod _ _ = unsafeCoerce unit
 
 -- Is Zero
-class IsZeroInt (int :: Int) (isZero :: Boolean) | int -> isZero
+class IsZeroInt (int :: Int) (isZero :: Prim.Boolean) | int -> isZero
 
 instance isZeroPos :: (IsZeroNat a isZero) => IsZeroInt (Pos a) isZero
 

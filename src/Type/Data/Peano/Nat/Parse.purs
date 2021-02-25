@@ -1,11 +1,10 @@
 module Type.Data.Peano.Nat.Parse where
 
 import Prelude (unit)
-import Type.Data.Peano.Nat.Definition (class ProductNat, class SumNat, class ExponentiationNat, NProxy(..), Succ, Z, kind Nat)
+import Type.Data.Peano.Nat.Definition (class ProductNat, class SumNat, class ExponentiationNat, Succ, Z, Nat)
 import Type.Data.Peano.Nat.TypeAliases (D10)
 
-import Data.Symbol (SProxy)
-import Prim (kind Symbol)
+import Prim (Symbol)
 import Prim.Symbol as Symbol
 import Unsafe.Coerce (unsafeCoerce)
 
@@ -16,8 +15,8 @@ instance length0 :: Length "" Z
 else
 instance lengthCons :: (Symbol.Cons head tail sym, Length tail tailLength) => Length sym (Succ tailLength)
 
-length :: ∀a b. Length a b => SProxy a -> NProxy b
-length _ = NProxy
+length :: ∀ sproxy proxy a b. Length a b => sproxy a -> proxy b
+length _ = unsafeCoerce unit
 
 
 -- Parse
@@ -67,8 +66,9 @@ instance parseCons ::
 -- | value-level parse of number
 -- |
 -- | ```purescript
+-- | parseNat (Proxy  "10") ~> D10
 -- | parseNat (SProxy "10") ~> D10
 -- | ```
 -- |
-parseNat :: ∀a sym. ParseNat sym a => SProxy sym -> NProxy a
+parseNat :: ∀ sproxy proxy sym a. ParseNat sym a => sproxy sym -> proxy a
 parseNat _ = unsafeCoerce unit
