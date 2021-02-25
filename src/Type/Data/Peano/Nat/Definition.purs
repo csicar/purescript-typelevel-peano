@@ -15,6 +15,8 @@ foreign import data Z :: Nat
 -- | Represents Successor of a Nat: `(Succ a) ^= 1 + a`
 foreign import data Succ :: Nat -> Nat
 
+data NProxy (n :: Nat) = NProxy
+
 class IsNat (a :: Nat) where
   -- | reflect typelevel Nat to a valuelevel Int
   -- |
@@ -29,6 +31,9 @@ instance isNatZ ∷ IsNat Z where
 
 instance isNatSucc ∷ IsNat a => IsNat (Succ a) where
   reflectNat _ = 1 + (reflectNat (unsafeCoerce unit :: Proxy a))
+
+instance showNProxy :: IsNat a => Show (NProxy a) where
+  show = show <<< reflectNat
 
 showNat :: forall n. IsNat n => Proxy n -> Prim.String
 showNat = show <<< reflectNat
