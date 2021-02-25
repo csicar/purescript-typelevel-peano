@@ -21,7 +21,8 @@ class IsNat (a :: Nat) where
   -- |
   -- |
   -- | ```purescript
-  -- | reflectNat (undefined :: NProxy D10) = 10
+  -- | reflectNat (Proxy  :: _ D10) = 10
+  -- | reflectNat (NProxy :: _ D10) = 10
   -- | ```
   reflectNat :: forall proxy. proxy a -> Int
 

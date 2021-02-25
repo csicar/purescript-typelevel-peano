@@ -33,7 +33,8 @@ class IsInt (i :: Int) where
   -- | reflect a type-level Int to a value-level Int
   -- |
   -- | ```purescript
-  -- | reflectInt (undefined :: y N10) = -10
+  -- | reflectInt (Proxy  :: _ N10) = -10
+  -- | reflectInt (IProxy :: _ N10) = -10
   -- | ```
   -- |
   reflectInt :: forall proxy. proxy i -> Prim.Int
