@@ -5,8 +5,11 @@ import Prelude
 import Data.Symbol (SProxy(..))
 import Effect (Effect)
 import Effect.Console (logShow)
-import Type.Data.Peano (D0, D1, D10, D100, D2, D3, D4, D5, D6, D64, D9, N2, N4, Neg, P1, P10, P4, P8, Pos, Succ, Z, mulNat, n1, p1, parseInt, parseNat, plus, plusNat, powNat, prod, reflectInt)
+import Type.Data.Peano (D0, D1, D10, D100, D2, D3, D4, D5, D6, D64, D9, N2, N4, Neg, P1, P10, P2, P4, P8, Pos, Succ, Z, d1, d2, mulNat, n1, p1, parseInt, parseNat, plus, plusNat, powNat, prod, reflectInt)
+import Type.Data.Peano as Peano
 import Type.Proxy (Proxy(..))
+import Unsafe.Coerce (unsafeCoerce)
+
 
 two :: Proxy (Pos (Succ (Succ Z)))
 two = Proxy
@@ -126,6 +129,31 @@ t27 = (Proxy :: Proxy D2) `powNat` (Proxy :: Proxy D6)
 
 t28 :: Proxy D100
 t28 = parseNat (SProxy :: SProxy "100")
+
+-- Test Proxy-agnostic
+t29 :: forall (proxy :: Peano.Int -> Type). proxy P2
+t29 = plus p1 p1
+
+t30 :: forall (proxy :: Peano.Int -> Type). proxy P1
+t30 = prod p1 p1
+
+t31 :: forall (proxy :: Peano.Nat -> Type). proxy D2
+t31 = plusNat d1 d1
+
+t32 :: forall (proxy :: Peano.Nat -> Type). proxy D1
+t32 = mulNat d1 d1
+
+t33 :: forall (proxy :: Peano.Nat -> Type). proxy D4
+t33 = powNat d2 d2
+
+t34 :: forall (sproxy :: Symbol -> Type) (proxy :: Peano.Int -> Type). proxy P2
+t34 = parseInt (unsafeCoerce unit :: sproxy "2")
+
+t35 :: forall (sproxy :: Symbol -> Type) (proxy :: Peano.Int -> Type). proxy N2
+t35 = parseInt (unsafeCoerce unit :: sproxy "-2")
+
+t36 :: forall (sproxy :: Symbol -> Type) (proxy :: Peano.Nat -> Type). proxy D2
+t36 = parseNat (unsafeCoerce unit :: sproxy "2")
 
 main :: Effect Unit
 main = do
