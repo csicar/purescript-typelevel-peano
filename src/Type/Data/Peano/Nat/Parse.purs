@@ -7,7 +7,6 @@ import Type.Data.Peano.Nat.TypeAliases (D10)
 import Data.Symbol (SProxy)
 import Prim (Symbol)
 import Prim.Symbol as Symbol
-import Type.Proxy (Proxy(..))
 import Unsafe.Coerce (unsafeCoerce)
 
 
@@ -17,8 +16,8 @@ instance length0 :: Length "" Z
 else
 instance lengthCons :: (Symbol.Cons head tail sym, Length tail tailLength) => Length sym (Succ tailLength)
 
-length :: ∀a b. Length a b => SProxy a -> Proxy b
-length _ = Proxy
+length :: ∀ proxy a b. Length a b => SProxy a -> proxy b
+length _ = unsafeCoerce unit
 
 
 -- Parse
@@ -71,5 +70,5 @@ instance parseCons ::
 -- | parseNat (SProxy "10") ~> D10
 -- | ```
 -- |
-parseNat :: ∀a sym. ParseNat sym a => SProxy sym -> Proxy a
+parseNat :: ∀a sym proxy. ParseNat sym a => SProxy sym -> proxy a
 parseNat _ = unsafeCoerce unit
