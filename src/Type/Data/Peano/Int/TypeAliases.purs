@@ -1,10 +1,10 @@
 module Type.Data.Peano.Int.TypeAliases where
 
-import Type.Data.Peano.Nat.TypeAliases (D0, D1, D10, D100, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D3, D30, D31, D32, D33, D34, D35, D36, D37, D38, D39, D4, D40, D41, D42, D43, D44, D45, D46, D47, D48, D49, D5, D50, D51, D52, D53, D54, D55, D56, D57, D58, D59, D6, D60, D61, D62, D63, D64, D65, D66, D67, D68, D69, D7, D70, D71, D72, D73, D74, D75, D76, D77, D78, D79, D8, D80, D81, D82, D83, D84, D85, D86, D87, D88, D89, D9, D90, D91, D92, D93, D94, D95, D96, D97, D98, D99)
-
+import Prelude (unit)
 import Type.Data.Peano.Int.Definition (Neg, Pos)
+import Type.Data.Peano.Nat.TypeAliases (D0, D1, D10, D100, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D3, D30, D31, D32, D33, D34, D35, D36, D37, D38, D39, D4, D40, D41, D42, D43, D44, D45, D46, D47, D48, D49, D5, D50, D51, D52, D53, D54, D55, D56, D57, D58, D59, D6, D60, D61, D62, D63, D64, D65, D66, D67, D68, D69, D7, D70, D71, D72, D73, D74, D75, D76, D77, D78, D79, D8, D80, D81, D82, D83, D84, D85, D86, D87, D88, D89, D9, D90, D91, D92, D93, D94, D95, D96, D97, D98, D99)
+import Unsafe.Coerce
 
-import Type.Proxy (Proxy(..))
 
 type P0  = Pos D0
 type P1  = Pos D1
@@ -108,308 +108,308 @@ type P98 = Pos D98
 type P99 = Pos D99
 type P100 = Pos D100
 
-p0 :: Proxy P0
-p0 = Proxy
+p0 :: forall proxy. proxy P0
+p0 = unsafeCoerce unit
 
-p1 :: Proxy P1
-p1 = Proxy
+p1 :: forall proxy. proxy P1
+p1 = unsafeCoerce unit
 
-p2 :: Proxy P2
-p2 = Proxy
+p2 :: forall proxy. proxy P2
+p2 = unsafeCoerce unit
 
-p3 :: Proxy P3
-p3 = Proxy
+p3 :: forall proxy. proxy P3
+p3 = unsafeCoerce unit
 
-p4 :: Proxy P4
-p4 = Proxy
+p4 :: forall proxy. proxy P4
+p4 = unsafeCoerce unit
 
-p5 :: Proxy P5
-p5 = Proxy
+p5 :: forall proxy. proxy P5
+p5 = unsafeCoerce unit
 
-p6 :: Proxy P6
-p6 = Proxy
+p6 :: forall proxy. proxy P6
+p6 = unsafeCoerce unit
 
-p7 :: Proxy P7
-p7 = Proxy
+p7 :: forall proxy. proxy P7
+p7 = unsafeCoerce unit
 
-p8 :: Proxy P8
-p8 = Proxy
+p8 :: forall proxy. proxy P8
+p8 = unsafeCoerce unit
 
-p9 :: Proxy P9
-p9 = Proxy
+p9 :: forall proxy. proxy P9
+p9 = unsafeCoerce unit
 
-p10 :: Proxy P10
-p10 = Proxy
+p10 :: forall proxy. proxy P10
+p10 = unsafeCoerce unit
 
-p11 :: Proxy P11
-p11 = Proxy
+p11 :: forall proxy. proxy P11
+p11 = unsafeCoerce unit
 
-p12 :: Proxy P12
-p12 = Proxy
+p12 :: forall proxy. proxy P12
+p12 = unsafeCoerce unit
 
-p13 :: Proxy P13
-p13 = Proxy
+p13 :: forall proxy. proxy P13
+p13 = unsafeCoerce unit
 
-p14 :: Proxy P14
-p14 = Proxy
+p14 :: forall proxy. proxy P14
+p14 = unsafeCoerce unit
 
-p15 :: Proxy P15
-p15 = Proxy
+p15 :: forall proxy. proxy P15
+p15 = unsafeCoerce unit
 
-p16 :: Proxy P16
-p16 = Proxy
+p16 :: forall proxy. proxy P16
+p16 = unsafeCoerce unit
 
-p17 :: Proxy P17
-p17 = Proxy
+p17 :: forall proxy. proxy P17
+p17 = unsafeCoerce unit
 
-p18 :: Proxy P18
-p18 = Proxy
+p18 :: forall proxy. proxy P18
+p18 = unsafeCoerce unit
 
-p19 :: Proxy P19
-p19 = Proxy
+p19 :: forall proxy. proxy P19
+p19 = unsafeCoerce unit
 
-p20 :: Proxy P20
-p20 = Proxy
+p20 :: forall proxy. proxy P20
+p20 = unsafeCoerce unit
 
-p21 :: Proxy P21
-p21 = Proxy
+p21 :: forall proxy. proxy P21
+p21 = unsafeCoerce unit
 
-p22 :: Proxy P22
-p22 = Proxy
+p22 :: forall proxy. proxy P22
+p22 = unsafeCoerce unit
 
-p23 :: Proxy P23
-p23 = Proxy
+p23 :: forall proxy. proxy P23
+p23 = unsafeCoerce unit
 
-p24 :: Proxy P24
-p24 = Proxy
+p24 :: forall proxy. proxy P24
+p24 = unsafeCoerce unit
 
-p25 :: Proxy P25
-p25 = Proxy
+p25 :: forall proxy. proxy P25
+p25 = unsafeCoerce unit
 
-p26 :: Proxy P26
-p26 = Proxy
+p26 :: forall proxy. proxy P26
+p26 = unsafeCoerce unit
 
-p27 :: Proxy P27
-p27 = Proxy
+p27 :: forall proxy. proxy P27
+p27 = unsafeCoerce unit
 
-p28 :: Proxy P28
-p28 = Proxy
+p28 :: forall proxy. proxy P28
+p28 = unsafeCoerce unit
 
-p29 :: Proxy P29
-p29 = Proxy
+p29 :: forall proxy. proxy P29
+p29 = unsafeCoerce unit
 
-p30 :: Proxy P30
-p30 = Proxy
+p30 :: forall proxy. proxy P30
+p30 = unsafeCoerce unit
 
-p31 :: Proxy P31
-p31 = Proxy
+p31 :: forall proxy. proxy P31
+p31 = unsafeCoerce unit
 
-p32 :: Proxy P32
-p32 = Proxy
+p32 :: forall proxy. proxy P32
+p32 = unsafeCoerce unit
 
-p33 :: Proxy P33
-p33 = Proxy
+p33 :: forall proxy. proxy P33
+p33 = unsafeCoerce unit
 
-p34 :: Proxy P34
-p34 = Proxy
+p34 :: forall proxy. proxy P34
+p34 = unsafeCoerce unit
 
-p35 :: Proxy P35
-p35 = Proxy
+p35 :: forall proxy. proxy P35
+p35 = unsafeCoerce unit
 
-p36 :: Proxy P36
-p36 = Proxy
+p36 :: forall proxy. proxy P36
+p36 = unsafeCoerce unit
 
-p37 :: Proxy P37
-p37 = Proxy
+p37 :: forall proxy. proxy P37
+p37 = unsafeCoerce unit
 
-p38 :: Proxy P38
-p38 = Proxy
+p38 :: forall proxy. proxy P38
+p38 = unsafeCoerce unit
 
-p39 :: Proxy P39
-p39 = Proxy
+p39 :: forall proxy. proxy P39
+p39 = unsafeCoerce unit
 
-p40 :: Proxy P40
-p40 = Proxy
+p40 :: forall proxy. proxy P40
+p40 = unsafeCoerce unit
 
-p41 :: Proxy P41
-p41 = Proxy
+p41 :: forall proxy. proxy P41
+p41 = unsafeCoerce unit
 
-p42 :: Proxy P42
-p42 = Proxy
+p42 :: forall proxy. proxy P42
+p42 = unsafeCoerce unit
 
-p43 :: Proxy P43
-p43 = Proxy
+p43 :: forall proxy. proxy P43
+p43 = unsafeCoerce unit
 
-p44 :: Proxy P44
-p44 = Proxy
+p44 :: forall proxy. proxy P44
+p44 = unsafeCoerce unit
 
-p45 :: Proxy P45
-p45 = Proxy
+p45 :: forall proxy. proxy P45
+p45 = unsafeCoerce unit
 
-p46 :: Proxy P46
-p46 = Proxy
+p46 :: forall proxy. proxy P46
+p46 = unsafeCoerce unit
 
-p47 :: Proxy P47
-p47 = Proxy
+p47 :: forall proxy. proxy P47
+p47 = unsafeCoerce unit
 
-p48 :: Proxy P48
-p48 = Proxy
+p48 :: forall proxy. proxy P48
+p48 = unsafeCoerce unit
 
-p49 :: Proxy P49
-p49 = Proxy
+p49 :: forall proxy. proxy P49
+p49 = unsafeCoerce unit
 
-p50 :: Proxy P50
-p50 = Proxy
+p50 :: forall proxy. proxy P50
+p50 = unsafeCoerce unit
 
-p51 :: Proxy P51
-p51 = Proxy
+p51 :: forall proxy. proxy P51
+p51 = unsafeCoerce unit
 
-p52 :: Proxy P52
-p52 = Proxy
+p52 :: forall proxy. proxy P52
+p52 = unsafeCoerce unit
 
-p53 :: Proxy P53
-p53 = Proxy
+p53 :: forall proxy. proxy P53
+p53 = unsafeCoerce unit
 
-p54 :: Proxy P54
-p54 = Proxy
+p54 :: forall proxy. proxy P54
+p54 = unsafeCoerce unit
 
-p55 :: Proxy P55
-p55 = Proxy
+p55 :: forall proxy. proxy P55
+p55 = unsafeCoerce unit
 
-p56 :: Proxy P56
-p56 = Proxy
+p56 :: forall proxy. proxy P56
+p56 = unsafeCoerce unit
 
-p57 :: Proxy P57
-p57 = Proxy
+p57 :: forall proxy. proxy P57
+p57 = unsafeCoerce unit
 
-p58 :: Proxy P58
-p58 = Proxy
+p58 :: forall proxy. proxy P58
+p58 = unsafeCoerce unit
 
-p59 :: Proxy P59
-p59 = Proxy
+p59 :: forall proxy. proxy P59
+p59 = unsafeCoerce unit
 
-p60 :: Proxy P60
-p60 = Proxy
+p60 :: forall proxy. proxy P60
+p60 = unsafeCoerce unit
 
-p61 :: Proxy P61
-p61 = Proxy
+p61 :: forall proxy. proxy P61
+p61 = unsafeCoerce unit
 
-p62 :: Proxy P62
-p62 = Proxy
+p62 :: forall proxy. proxy P62
+p62 = unsafeCoerce unit
 
-p63 :: Proxy P63
-p63 = Proxy
+p63 :: forall proxy. proxy P63
+p63 = unsafeCoerce unit
 
-p64 :: Proxy P64
-p64 = Proxy
+p64 :: forall proxy. proxy P64
+p64 = unsafeCoerce unit
 
-p65 :: Proxy P65
-p65 = Proxy
+p65 :: forall proxy. proxy P65
+p65 = unsafeCoerce unit
 
-p66 :: Proxy P66
-p66 = Proxy
+p66 :: forall proxy. proxy P66
+p66 = unsafeCoerce unit
 
-p67 :: Proxy P67
-p67 = Proxy
+p67 :: forall proxy. proxy P67
+p67 = unsafeCoerce unit
 
-p68 :: Proxy P68
-p68 = Proxy
+p68 :: forall proxy. proxy P68
+p68 = unsafeCoerce unit
 
-p69 :: Proxy P69
-p69 = Proxy
+p69 :: forall proxy. proxy P69
+p69 = unsafeCoerce unit
 
-p70 :: Proxy P70
-p70 = Proxy
+p70 :: forall proxy. proxy P70
+p70 = unsafeCoerce unit
 
-p71 :: Proxy P71
-p71 = Proxy
+p71 :: forall proxy. proxy P71
+p71 = unsafeCoerce unit
 
-p72 :: Proxy P72
-p72 = Proxy
+p72 :: forall proxy. proxy P72
+p72 = unsafeCoerce unit
 
-p73 :: Proxy P73
-p73 = Proxy
+p73 :: forall proxy. proxy P73
+p73 = unsafeCoerce unit
 
-p74 :: Proxy P74
-p74 = Proxy
+p74 :: forall proxy. proxy P74
+p74 = unsafeCoerce unit
 
-p75 :: Proxy P75
-p75 = Proxy
+p75 :: forall proxy. proxy P75
+p75 = unsafeCoerce unit
 
-p76 :: Proxy P76
-p76 = Proxy
+p76 :: forall proxy. proxy P76
+p76 = unsafeCoerce unit
 
-p77 :: Proxy P77
-p77 = Proxy
+p77 :: forall proxy. proxy P77
+p77 = unsafeCoerce unit
 
-p78 :: Proxy P78
-p78 = Proxy
+p78 :: forall proxy. proxy P78
+p78 = unsafeCoerce unit
 
-p79 :: Proxy P79
-p79 = Proxy
+p79 :: forall proxy. proxy P79
+p79 = unsafeCoerce unit
 
-p80 :: Proxy P80
-p80 = Proxy
+p80 :: forall proxy. proxy P80
+p80 = unsafeCoerce unit
 
-p81 :: Proxy P81
-p81 = Proxy
+p81 :: forall proxy. proxy P81
+p81 = unsafeCoerce unit
 
-p82 :: Proxy P82
-p82 = Proxy
+p82 :: forall proxy. proxy P82
+p82 = unsafeCoerce unit
 
-p83 :: Proxy P83
-p83 = Proxy
+p83 :: forall proxy. proxy P83
+p83 = unsafeCoerce unit
 
-p84 :: Proxy P84
-p84 = Proxy
+p84 :: forall proxy. proxy P84
+p84 = unsafeCoerce unit
 
-p85 :: Proxy P85
-p85 = Proxy
+p85 :: forall proxy. proxy P85
+p85 = unsafeCoerce unit
 
-p86 :: Proxy P86
-p86 = Proxy
+p86 :: forall proxy. proxy P86
+p86 = unsafeCoerce unit
 
-p87 :: Proxy P87
-p87 = Proxy
+p87 :: forall proxy. proxy P87
+p87 = unsafeCoerce unit
 
-p88 :: Proxy P88
-p88 = Proxy
+p88 :: forall proxy. proxy P88
+p88 = unsafeCoerce unit
 
-p89 :: Proxy P89
-p89 = Proxy
+p89 :: forall proxy. proxy P89
+p89 = unsafeCoerce unit
 
-p90 :: Proxy P90
-p90 = Proxy
+p90 :: forall proxy. proxy P90
+p90 = unsafeCoerce unit
 
-p91 :: Proxy P91
-p91 = Proxy
+p91 :: forall proxy. proxy P91
+p91 = unsafeCoerce unit
 
-p92 :: Proxy P92
-p92 = Proxy
+p92 :: forall proxy. proxy P92
+p92 = unsafeCoerce unit
 
-p93 :: Proxy P93
-p93 = Proxy
+p93 :: forall proxy. proxy P93
+p93 = unsafeCoerce unit
 
-p94 :: Proxy P94
-p94 = Proxy
+p94 :: forall proxy. proxy P94
+p94 = unsafeCoerce unit
 
-p95 :: Proxy P95
-p95 = Proxy
+p95 :: forall proxy. proxy P95
+p95 = unsafeCoerce unit
 
-p96 :: Proxy P96
-p96 = Proxy
+p96 :: forall proxy. proxy P96
+p96 = unsafeCoerce unit
 
-p97 :: Proxy P97
-p97 = Proxy
+p97 :: forall proxy. proxy P97
+p97 = unsafeCoerce unit
 
-p98 :: Proxy P98
-p98 = Proxy
+p98 :: forall proxy. proxy P98
+p98 = unsafeCoerce unit
 
-p99 :: Proxy P99
-p99 = Proxy
+p99 :: forall proxy. proxy P99
+p99 = unsafeCoerce unit
 
-p100 :: Proxy P100
-p100 = Proxy
+p100 :: forall proxy. proxy P100
+p100 = unsafeCoerce unit
 
 
 type N0  = Neg D0
@@ -515,305 +515,305 @@ type N99 = Neg D99
 type N100 = Neg D100
 
 
-n0 :: Proxy N0
-n0 = Proxy
+n0 :: forall proxy. proxy N0
+n0 = unsafeCoerce unit
 
-n1 :: Proxy N1
-n1 = Proxy
+n1 :: forall proxy. proxy N1
+n1 = unsafeCoerce unit
 
-n2 :: Proxy N2
-n2 = Proxy
+n2 :: forall proxy. proxy N2
+n2 = unsafeCoerce unit
 
-n3 :: Proxy N3
-n3 = Proxy
+n3 :: forall proxy. proxy N3
+n3 = unsafeCoerce unit
 
-n4 :: Proxy N4
-n4 = Proxy
+n4 :: forall proxy. proxy N4
+n4 = unsafeCoerce unit
 
-n5 :: Proxy N5
-n5 = Proxy
+n5 :: forall proxy. proxy N5
+n5 = unsafeCoerce unit
 
-n6 :: Proxy N6
-n6 = Proxy
+n6 :: forall proxy. proxy N6
+n6 = unsafeCoerce unit
 
-n7 :: Proxy N7
-n7 = Proxy
+n7 :: forall proxy. proxy N7
+n7 = unsafeCoerce unit
 
-n8 :: Proxy N8
-n8 = Proxy
+n8 :: forall proxy. proxy N8
+n8 = unsafeCoerce unit
 
-n9 :: Proxy N9
-n9 = Proxy
+n9 :: forall proxy. proxy N9
+n9 = unsafeCoerce unit
 
-n10 :: Proxy N10
-n10 = Proxy
+n10 :: forall proxy. proxy N10
+n10 = unsafeCoerce unit
 
-n11 :: Proxy N11
-n11 = Proxy
+n11 :: forall proxy. proxy N11
+n11 = unsafeCoerce unit
 
-n12 :: Proxy N12
-n12 = Proxy
+n12 :: forall proxy. proxy N12
+n12 = unsafeCoerce unit
 
-n13 :: Proxy N13
-n13 = Proxy
+n13 :: forall proxy. proxy N13
+n13 = unsafeCoerce unit
 
-n14 :: Proxy N14
-n14 = Proxy
+n14 :: forall proxy. proxy N14
+n14 = unsafeCoerce unit
 
-n15 :: Proxy N15
-n15 = Proxy
+n15 :: forall proxy. proxy N15
+n15 = unsafeCoerce unit
 
-n16 :: Proxy N16
-n16 = Proxy
+n16 :: forall proxy. proxy N16
+n16 = unsafeCoerce unit
 
-n17 :: Proxy N17
-n17 = Proxy
+n17 :: forall proxy. proxy N17
+n17 = unsafeCoerce unit
 
-n18 :: Proxy N18
-n18 = Proxy
+n18 :: forall proxy. proxy N18
+n18 = unsafeCoerce unit
 
-n19 :: Proxy N19
-n19 = Proxy
+n19 :: forall proxy. proxy N19
+n19 = unsafeCoerce unit
 
-n20 :: Proxy N20
-n20 = Proxy
+n20 :: forall proxy. proxy N20
+n20 = unsafeCoerce unit
 
-n21 :: Proxy N21
-n21 = Proxy
+n21 :: forall proxy. proxy N21
+n21 = unsafeCoerce unit
 
-n22 :: Proxy N22
-n22 = Proxy
+n22 :: forall proxy. proxy N22
+n22 = unsafeCoerce unit
 
-n23 :: Proxy N23
-n23 = Proxy
+n23 :: forall proxy. proxy N23
+n23 = unsafeCoerce unit
 
-n24 :: Proxy N24
-n24 = Proxy
+n24 :: forall proxy. proxy N24
+n24 = unsafeCoerce unit
 
-n25 :: Proxy N25
-n25 = Proxy
+n25 :: forall proxy. proxy N25
+n25 = unsafeCoerce unit
 
-n26 :: Proxy N26
-n26 = Proxy
+n26 :: forall proxy. proxy N26
+n26 = unsafeCoerce unit
 
-n27 :: Proxy N27
-n27 = Proxy
+n27 :: forall proxy. proxy N27
+n27 = unsafeCoerce unit
 
-n28 :: Proxy N28
-n28 = Proxy
+n28 :: forall proxy. proxy N28
+n28 = unsafeCoerce unit
 
-n29 :: Proxy N29
-n29 = Proxy
+n29 :: forall proxy. proxy N29
+n29 = unsafeCoerce unit
 
-n30 :: Proxy N30
-n30 = Proxy
+n30 :: forall proxy. proxy N30
+n30 = unsafeCoerce unit
 
-n31 :: Proxy N31
-n31 = Proxy
+n31 :: forall proxy. proxy N31
+n31 = unsafeCoerce unit
 
-n32 :: Proxy N32
-n32 = Proxy
+n32 :: forall proxy. proxy N32
+n32 = unsafeCoerce unit
 
-n33 :: Proxy N33
-n33 = Proxy
+n33 :: forall proxy. proxy N33
+n33 = unsafeCoerce unit
 
-n34 :: Proxy N34
-n34 = Proxy
+n34 :: forall proxy. proxy N34
+n34 = unsafeCoerce unit
 
-n35 :: Proxy N35
-n35 = Proxy
+n35 :: forall proxy. proxy N35
+n35 = unsafeCoerce unit
 
-n36 :: Proxy N36
-n36 = Proxy
+n36 :: forall proxy. proxy N36
+n36 = unsafeCoerce unit
 
-n37 :: Proxy N37
-n37 = Proxy
+n37 :: forall proxy. proxy N37
+n37 = unsafeCoerce unit
 
-n38 :: Proxy N38
-n38 = Proxy
+n38 :: forall proxy. proxy N38
+n38 = unsafeCoerce unit
 
-n39 :: Proxy N39
-n39 = Proxy
+n39 :: forall proxy. proxy N39
+n39 = unsafeCoerce unit
 
-n40 :: Proxy N40
-n40 = Proxy
+n40 :: forall proxy. proxy N40
+n40 = unsafeCoerce unit
 
-n41 :: Proxy N41
-n41 = Proxy
+n41 :: forall proxy. proxy N41
+n41 = unsafeCoerce unit
 
-n42 :: Proxy N42
-n42 = Proxy
+n42 :: forall proxy. proxy N42
+n42 = unsafeCoerce unit
 
-n43 :: Proxy N43
-n43 = Proxy
+n43 :: forall proxy. proxy N43
+n43 = unsafeCoerce unit
 
-n44 :: Proxy N44
-n44 = Proxy
+n44 :: forall proxy. proxy N44
+n44 = unsafeCoerce unit
 
-n45 :: Proxy N45
-n45 = Proxy
+n45 :: forall proxy. proxy N45
+n45 = unsafeCoerce unit
 
-n46 :: Proxy N46
-n46 = Proxy
+n46 :: forall proxy. proxy N46
+n46 = unsafeCoerce unit
 
-n47 :: Proxy N47
-n47 = Proxy
+n47 :: forall proxy. proxy N47
+n47 = unsafeCoerce unit
 
-n48 :: Proxy N48
-n48 = Proxy
+n48 :: forall proxy. proxy N48
+n48 = unsafeCoerce unit
 
-n49 :: Proxy N49
-n49 = Proxy
+n49 :: forall proxy. proxy N49
+n49 = unsafeCoerce unit
 
-n50 :: Proxy N50
-n50 = Proxy
+n50 :: forall proxy. proxy N50
+n50 = unsafeCoerce unit
 
-n51 :: Proxy N51
-n51 = Proxy
+n51 :: forall proxy. proxy N51
+n51 = unsafeCoerce unit
 
-n52 :: Proxy N52
-n52 = Proxy
+n52 :: forall proxy. proxy N52
+n52 = unsafeCoerce unit
 
-n53 :: Proxy N53
-n53 = Proxy
+n53 :: forall proxy. proxy N53
+n53 = unsafeCoerce unit
 
-n54 :: Proxy N54
-n54 = Proxy
+n54 :: forall proxy. proxy N54
+n54 = unsafeCoerce unit
 
-n55 :: Proxy N55
-n55 = Proxy
+n55 :: forall proxy. proxy N55
+n55 = unsafeCoerce unit
 
-n56 :: Proxy N56
-n56 = Proxy
+n56 :: forall proxy. proxy N56
+n56 = unsafeCoerce unit
 
-n57 :: Proxy N57
-n57 = Proxy
+n57 :: forall proxy. proxy N57
+n57 = unsafeCoerce unit
 
-n58 :: Proxy N58
-n58 = Proxy
+n58 :: forall proxy. proxy N58
+n58 = unsafeCoerce unit
 
-n59 :: Proxy N59
-n59 = Proxy
+n59 :: forall proxy. proxy N59
+n59 = unsafeCoerce unit
 
-n60 :: Proxy N60
-n60 = Proxy
+n60 :: forall proxy. proxy N60
+n60 = unsafeCoerce unit
 
-n61 :: Proxy N61
-n61 = Proxy
+n61 :: forall proxy. proxy N61
+n61 = unsafeCoerce unit
 
-n62 :: Proxy N62
-n62 = Proxy
+n62 :: forall proxy. proxy N62
+n62 = unsafeCoerce unit
 
-n63 :: Proxy N63
-n63 = Proxy
+n63 :: forall proxy. proxy N63
+n63 = unsafeCoerce unit
 
-n64 :: Proxy N64
-n64 = Proxy
+n64 :: forall proxy. proxy N64
+n64 = unsafeCoerce unit
 
-n65 :: Proxy N65
-n65 = Proxy
+n65 :: forall proxy. proxy N65
+n65 = unsafeCoerce unit
 
-n66 :: Proxy N66
-n66 = Proxy
+n66 :: forall proxy. proxy N66
+n66 = unsafeCoerce unit
 
-n67 :: Proxy N67
-n67 = Proxy
+n67 :: forall proxy. proxy N67
+n67 = unsafeCoerce unit
 
-n68 :: Proxy N68
-n68 = Proxy
+n68 :: forall proxy. proxy N68
+n68 = unsafeCoerce unit
 
-n69 :: Proxy N69
-n69 = Proxy
+n69 :: forall proxy. proxy N69
+n69 = unsafeCoerce unit
 
-n70 :: Proxy N70
-n70 = Proxy
+n70 :: forall proxy. proxy N70
+n70 = unsafeCoerce unit
 
-n71 :: Proxy N71
-n71 = Proxy
+n71 :: forall proxy. proxy N71
+n71 = unsafeCoerce unit
 
-n72 :: Proxy N72
-n72 = Proxy
+n72 :: forall proxy. proxy N72
+n72 = unsafeCoerce unit
 
-n73 :: Proxy N73
-n73 = Proxy
+n73 :: forall proxy. proxy N73
+n73 = unsafeCoerce unit
 
-n74 :: Proxy N74
-n74 = Proxy
+n74 :: forall proxy. proxy N74
+n74 = unsafeCoerce unit
 
-n75 :: Proxy N75
-n75 = Proxy
+n75 :: forall proxy. proxy N75
+n75 = unsafeCoerce unit
 
-n76 :: Proxy N76
-n76 = Proxy
+n76 :: forall proxy. proxy N76
+n76 = unsafeCoerce unit
 
-n77 :: Proxy N77
-n77 = Proxy
+n77 :: forall proxy. proxy N77
+n77 = unsafeCoerce unit
 
-n78 :: Proxy N78
-n78 = Proxy
+n78 :: forall proxy. proxy N78
+n78 = unsafeCoerce unit
 
-n79 :: Proxy N79
-n79 = Proxy
+n79 :: forall proxy. proxy N79
+n79 = unsafeCoerce unit
 
-n80 :: Proxy N80
-n80 = Proxy
+n80 :: forall proxy. proxy N80
+n80 = unsafeCoerce unit
 
-n81 :: Proxy N81
-n81 = Proxy
+n81 :: forall proxy. proxy N81
+n81 = unsafeCoerce unit
 
-n82 :: Proxy N82
-n82 = Proxy
+n82 :: forall proxy. proxy N82
+n82 = unsafeCoerce unit
 
-n83 :: Proxy N83
-n83 = Proxy
+n83 :: forall proxy. proxy N83
+n83 = unsafeCoerce unit
 
-n84 :: Proxy N84
-n84 = Proxy
+n84 :: forall proxy. proxy N84
+n84 = unsafeCoerce unit
 
-n85 :: Proxy N85
-n85 = Proxy
+n85 :: forall proxy. proxy N85
+n85 = unsafeCoerce unit
 
-n86 :: Proxy N86
-n86 = Proxy
+n86 :: forall proxy. proxy N86
+n86 = unsafeCoerce unit
 
-n87 :: Proxy N87
-n87 = Proxy
+n87 :: forall proxy. proxy N87
+n87 = unsafeCoerce unit
 
-n88 :: Proxy N88
-n88 = Proxy
+n88 :: forall proxy. proxy N88
+n88 = unsafeCoerce unit
 
-n89 :: Proxy N89
-n89 = Proxy
+n89 :: forall proxy. proxy N89
+n89 = unsafeCoerce unit
 
-n90 :: Proxy N90
-n90 = Proxy
+n90 :: forall proxy. proxy N90
+n90 = unsafeCoerce unit
 
-n91 :: Proxy N91
-n91 = Proxy
+n91 :: forall proxy. proxy N91
+n91 = unsafeCoerce unit
 
-n92 :: Proxy N92
-n92 = Proxy
+n92 :: forall proxy. proxy N92
+n92 = unsafeCoerce unit
 
-n93 :: Proxy N93
-n93 = Proxy
+n93 :: forall proxy. proxy N93
+n93 = unsafeCoerce unit
 
-n94 :: Proxy N94
-n94 = Proxy
+n94 :: forall proxy. proxy N94
+n94 = unsafeCoerce unit
 
-n95 :: Proxy N95
-n95 = Proxy
+n95 :: forall proxy. proxy N95
+n95 = unsafeCoerce unit
 
-n96 :: Proxy N96
-n96 = Proxy
+n96 :: forall proxy. proxy N96
+n96 = unsafeCoerce unit
 
-n97 :: Proxy N97
-n97 = Proxy
+n97 :: forall proxy. proxy N97
+n97 = unsafeCoerce unit
 
-n98 :: Proxy N98
-n98 = Proxy
+n98 :: forall proxy. proxy N98
+n98 = unsafeCoerce unit
 
-n99 :: Proxy N99
-n99 = Proxy
+n99 :: forall proxy. proxy N99
+n99 = unsafeCoerce unit
 
-n100 :: Proxy N100
-n100 = Proxy
+n100 :: forall proxy. proxy N100
+n100 = unsafeCoerce unit
