@@ -8,7 +8,6 @@ import Type.Data.Boolean (class If)
 import Type.Data.Peano.Int.Definition (Neg, Pos, Int)
 import Type.Data.Peano.Nat (class ParseNat)
 import Type.Data.Symbol (class Cons, class Equals, SProxy)
-import Type.Proxy (Proxy)
 import Unsafe.Coerce (unsafeCoerce)
 
 -- Parsing
@@ -24,7 +23,7 @@ class ParseInt (sym :: Symbol) (int :: Int) | int -> sym, sym -> int
 
 instance parseSigned :: 
    ( Equals "-" head isMinus
-   , If isMinus (Proxy (Neg natValue)) (Proxy (Pos natValue)) (Proxy int)
+   , If isMinus (proxy (Neg natValue)) (proxy (Pos natValue)) (proxy int)
    , If isMinus (SProxy tail) (SProxy sym) (SProxy numberSymbol)
    , Cons head tail sym
    , ParseNat numberSymbol natValue
@@ -37,5 +36,5 @@ instance parseSigned ::
 -- | 	-- N1137 would be type alias for Neg (Succ^1337 Z)
 -- | ```
 -- |
-parseInt :: ∀a sym. ParseInt sym a => SProxy sym -> Proxy a
+parseInt :: ∀a sym proxy. ParseInt sym a => SProxy sym -> proxy a
 parseInt _ = unsafeCoerce unit

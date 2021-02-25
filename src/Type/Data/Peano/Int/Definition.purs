@@ -3,7 +3,6 @@ module Type.Data.Peano.Int.Definition where
 import Prelude
 import Type.Data.Peano.Nat (class IsNat, Succ, Z, reflectNat, Nat)
 import Type.Data.Peano.Nat.Definition (class IsZeroNat)
-import Type.Proxy (Proxy)
 import Prim as Prim
 import Unsafe.Coerce (unsafeCoerce)
 
@@ -37,18 +36,18 @@ class IsInt (i :: Int) where
   -- | reflectInt (undefined :: y N10) = -10
   -- | ```
   -- |
-  reflectInt :: Proxy i -> Prim.Int
+  reflectInt :: forall proxy. proxy i -> Prim.Int
 
 instance isIntPos ∷ IsNat n => IsInt (Pos n) where
-  reflectInt _ = reflectNat (unsafeCoerce unit :: Proxy n)
+  reflectInt _ = reflectNat (unsafeCoerce unit :: _ n)
 
 instance isIntNeg :: IsNat n => IsInt (Neg n) where
-  reflectInt _ = -reflectNat (unsafeCoerce unit :: Proxy n)
+  reflectInt _ = -reflectNat (unsafeCoerce unit :: _ n)
 
 instance showIProxy :: IsInt i => Show (IProxy i) where
   show = show <<< reflectInt
 
-showInt :: forall i. IsInt i => Proxy i -> Prim.String
+showInt :: forall proxy i. IsInt i => proxy i -> Prim.String
 showInt = show <<< reflectInt
 
 -- Addition
@@ -76,8 +75,8 @@ instance minusZ :: SumInt (Pos a) (Neg Z) (Pos a)
 
 instance minusZ' :: SumInt (Neg Z) (Pos a) (Pos a)
 
-plus :: ∀ a b c. SumInt a b c => Proxy a -> Proxy b -> Proxy c
-plus _ _ = unsafeCoerce unit :: Proxy c
+plus :: ∀ proxy a b c. SumInt a b c => proxy a -> proxy b -> proxy c
+plus _ _ = unsafeCoerce unit
 
 -- Inverse
 -- | Invert the sign of a value (except for 0, which always stays positive)
@@ -107,8 +106,8 @@ else instance productNegPos :: ProductInt (Pos a) (Pos b) (Pos c) => ProductInt 
 else -- (1 + a) * b = b + (a * b)
 instance productSucc :: (ProductInt (Pos a) b ab, SumInt ab b result) => ProductInt (Pos (Succ a)) b result
 
-prod :: ∀ a b c. ProductInt a b c => Proxy a -> Proxy b -> Proxy c
-prod _ _ = unsafeCoerce unit :: Proxy c
+prod :: ∀ proxy a b c. ProductInt a b c => proxy a -> proxy b -> proxy c
+prod _ _ = unsafeCoerce unit
 
 -- Is Zero
 class IsZeroInt (int :: Int) (isZero :: Prim.Boolean) | int -> isZero
