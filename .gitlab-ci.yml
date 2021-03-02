@@ -1,4 +1,4 @@
-image: registry.gitlab.com/csicar/docker-purescript
+image: registry.gitlab.com/csicar/docker-purescript:v0.14.0-nix
 
 cache:
   paths:
@@ -7,6 +7,8 @@ cache:
 
 build:
   script:
+    - spago --version
+    - purs --version
     - spago build
 
 test:
@@ -14,7 +16,21 @@ test:
     - ls
     - spago test
 
+test-doctest:
+  script:
+    - spago build
+    - spago sources
+    - shopt -s globstar && purepur -o doctest --src ./src --src ./README.md $(spago sources)
+    # - spago run -x 
+
+lint:
+  script:
+    - purty validate src
+    - purty validate test
+
 
 stages:
   - build
   - test
+  - lint
+
