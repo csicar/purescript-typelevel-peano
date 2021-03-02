@@ -1,24 +1,25 @@
 {
-	"name": "purescript-typelevel-peano",
-	"license": "MIT",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"output"
-	],
-	"repository": {
-		"url": "https://github.com/csicar/purescript-typelevel-peano",
-		"type": "git"
-	},
-	"dependencies": {
-		"purescript-prelude": "master",
-		"purescript-typelevel-prelude": "master",
-		"purescript-console": "master",
-		"purescript-effect": "master",
-		"purescript-arrays": "master"
-	},
-	"devDependencies": {
-		"purescript-psci-support": "master"
-	}
+    "name": "purescript-purescript-typelevel-peano",
+    "license": [
+        "MIT"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/csicar/purescript-typelevel-peano"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "output"
+    ],
+    "dependencies": {
+        "purescript-arrays": "^v6.0.0",
+        "purescript-console": "^v5.0.0",
+        "purescript-effect": "^v3.0.0",
+        "purescript-prelude": "^v5.0.0",
+        "purescript-psci-support": "^v5.0.0",
+        "purescript-typelevel-prelude": "^v6.0.0",
+        "purescript-unsafe-coerce": "^v5.0.0"
+    }
 }
