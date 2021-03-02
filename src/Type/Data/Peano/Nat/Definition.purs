@@ -59,8 +59,8 @@ instance productZ' :: ProductNat Z a Z
 
 --| 1 * a = a
 instance product1' ∷ ProductNat (Succ Z) a a
-else --| (1 + a) * b = b + a * b
-instance productSucc :: (ProductNat a b ab, SumNat ab b result) => ProductNat (Succ a) b result
+--| (1 + a) * b = b + a * b 
+else instance productSucc :: (ProductNat a b ab, SumNat ab b result) => ProductNat (Succ a) b result
 
 mulNat :: ∀ proxy a b c. ProductNat a b c => proxy a -> proxy b -> proxy c
 mulNat _ _ = unsafeCoerce unit

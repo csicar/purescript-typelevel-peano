@@ -35,9 +35,8 @@ else instance parseLit6 :: ParseNat "6" (Succ (Succ (Succ (Succ (Succ (Succ Z)))
 else instance parseLit7 :: ParseNat "7" (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))
 else instance parseLit8 :: ParseNat "8" (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z))))))))
 else instance parseLit9 :: ParseNat "9" (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
-else -- head : tail
--- 
-instance parseCons ::
+-- head : tail
+else instance parseCons ::
   ( ParseNat head msd
   , Symbol.Cons head tail sym
   , Length tail symLength
