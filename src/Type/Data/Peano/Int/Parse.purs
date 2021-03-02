@@ -1,9 +1,7 @@
 module Type.Data.Peano.Int.Parse where
 
 import Prelude (unit)
-
 import Prim hiding (Int(..))
-
 import Type.Data.Boolean (class If)
 import Type.Data.Peano.Int.Definition (Neg, Pos, Int)
 import Type.Data.Peano.Nat (class ParseNat)
@@ -11,7 +9,6 @@ import Type.Data.Symbol (class Cons, class Equals)
 import Unsafe.Coerce (unsafeCoerce)
 
 -- Parsing
-
 -- | Parse a Int from a Symbol 
 -- |
 -- | ```purescript
@@ -21,13 +18,14 @@ import Unsafe.Coerce (unsafeCoerce)
 -- |
 class ParseInt (sym :: Symbol) (int :: Int) | int -> sym, sym -> int
 
-instance parseSigned :: 
-   ( Equals "-" head isMinus
-   , If isMinus (proxy (Neg natValue)) (proxy (Pos natValue)) (proxy int)
-   , If isMinus (sproxy tail) (sproxy sym) (sproxy numberSymbol)
-   , Cons head tail sym
-   , ParseNat numberSymbol natValue
-   ) => ParseInt sym int
+instance parseSigned ::
+  ( Equals "-" head isMinus
+  , If isMinus (proxy (Neg natValue)) (proxy (Pos natValue)) (proxy int)
+  , If isMinus (sproxy tail) (sproxy sym) (sproxy numberSymbol)
+  , Cons head tail sym
+  , ParseNat numberSymbol natValue
+  ) =>
+  ParseInt sym int
 
 -- | parse Int a Value-Level
 -- |

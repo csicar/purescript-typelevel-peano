@@ -4,108 +4,308 @@ import Prelude (unit)
 import Type.Data.Peano.Nat.Definition (Succ, Z)
 import Unsafe.Coerce (unsafeCoerce)
 
+type D0
+  = Z
 
-type D0  = Z
-type D1  = Succ D0
-type D2  = Succ D1
-type D3  = Succ D2
-type D4  = Succ D3
-type D5  = Succ D4
-type D6  = Succ D5
-type D7  = Succ D6
-type D8  = Succ D7
-type D9  = Succ D8
-type D10 = Succ D9 
-type D11 = Succ D10
-type D12 = Succ D11
-type D13 = Succ D12
-type D14 = Succ D13
-type D15 = Succ D14
-type D16 = Succ D15
-type D17 = Succ D16
-type D18 = Succ D17
-type D19 = Succ D18
-type D20 = Succ D19
-type D21 = Succ D20
-type D22 = Succ D21
-type D23 = Succ D22
-type D24 = Succ D23
-type D25 = Succ D24
-type D26 = Succ D25
-type D27 = Succ D26
-type D28 = Succ D27
-type D29 = Succ D28
-type D30 = Succ D29
-type D31 = Succ D30
-type D32 = Succ D31
-type D33 = Succ D32
-type D34 = Succ D33
-type D35 = Succ D34
-type D36 = Succ D35
-type D37 = Succ D36
-type D38 = Succ D37
-type D39 = Succ D38
-type D40 = Succ D39
-type D41 = Succ D40
-type D42 = Succ D41
-type D43 = Succ D42
-type D44 = Succ D43
-type D45 = Succ D44
-type D46 = Succ D45
-type D47 = Succ D46
-type D48 = Succ D47
-type D49 = Succ D48
-type D50 = Succ D49
-type D51 = Succ D50
-type D52 = Succ D51
-type D53 = Succ D52
-type D54 = Succ D53
-type D55 = Succ D54
-type D56 = Succ D55
-type D57 = Succ D56
-type D58 = Succ D57
-type D59 = Succ D58
-type D60 = Succ D59
-type D61 = Succ D60
-type D62 = Succ D61
-type D63 = Succ D62
-type D64 = Succ D63
-type D65 = Succ D64
-type D66 = Succ D65
-type D67 = Succ D66
-type D68 = Succ D67
-type D69 = Succ D68
-type D70 = Succ D69
-type D71 = Succ D70
-type D72 = Succ D71
-type D73 = Succ D72
-type D74 = Succ D73
-type D75 = Succ D74
-type D76 = Succ D75
-type D77 = Succ D76
-type D78 = Succ D77
-type D79 = Succ D78
-type D80 = Succ D79
-type D81 = Succ D80
-type D82 = Succ D81
-type D83 = Succ D82
-type D84 = Succ D83
-type D85 = Succ D84
-type D86 = Succ D85
-type D87 = Succ D86
-type D88 = Succ D87
-type D89 = Succ D88
-type D90 = Succ D89
-type D91 = Succ D90
-type D92 = Succ D91
-type D93 = Succ D92
-type D94 = Succ D93
-type D95 = Succ D94
-type D96 = Succ D95
-type D97 = Succ D96
-type D98 = Succ D97
-type D99 = Succ D98
-type D100 = Succ D99
+type D1
+  = Succ D0
+
+type D2
+  = Succ D1
+
+type D3
+  = Succ D2
+
+type D4
+  = Succ D3
+
+type D5
+  = Succ D4
+
+type D6
+  = Succ D5
+
+type D7
+  = Succ D6
+
+type D8
+  = Succ D7
+
+type D9
+  = Succ D8
+
+type D10
+  = Succ D9
+
+type D11
+  = Succ D10
+
+type D12
+  = Succ D11
+
+type D13
+  = Succ D12
+
+type D14
+  = Succ D13
+
+type D15
+  = Succ D14
+
+type D16
+  = Succ D15
+
+type D17
+  = Succ D16
+
+type D18
+  = Succ D17
+
+type D19
+  = Succ D18
+
+type D20
+  = Succ D19
+
+type D21
+  = Succ D20
+
+type D22
+  = Succ D21
+
+type D23
+  = Succ D22
+
+type D24
+  = Succ D23
+
+type D25
+  = Succ D24
+
+type D26
+  = Succ D25
+
+type D27
+  = Succ D26
+
+type D28
+  = Succ D27
+
+type D29
+  = Succ D28
+
+type D30
+  = Succ D29
+
+type D31
+  = Succ D30
+
+type D32
+  = Succ D31
+
+type D33
+  = Succ D32
+
+type D34
+  = Succ D33
+
+type D35
+  = Succ D34
+
+type D36
+  = Succ D35
+
+type D37
+  = Succ D36
+
+type D38
+  = Succ D37
+
+type D39
+  = Succ D38
+
+type D40
+  = Succ D39
+
+type D41
+  = Succ D40
+
+type D42
+  = Succ D41
+
+type D43
+  = Succ D42
+
+type D44
+  = Succ D43
+
+type D45
+  = Succ D44
+
+type D46
+  = Succ D45
+
+type D47
+  = Succ D46
+
+type D48
+  = Succ D47
+
+type D49
+  = Succ D48
+
+type D50
+  = Succ D49
+
+type D51
+  = Succ D50
+
+type D52
+  = Succ D51
+
+type D53
+  = Succ D52
+
+type D54
+  = Succ D53
+
+type D55
+  = Succ D54
+
+type D56
+  = Succ D55
+
+type D57
+  = Succ D56
+
+type D58
+  = Succ D57
+
+type D59
+  = Succ D58
+
+type D60
+  = Succ D59
+
+type D61
+  = Succ D60
+
+type D62
+  = Succ D61
+
+type D63
+  = Succ D62
+
+type D64
+  = Succ D63
+
+type D65
+  = Succ D64
+
+type D66
+  = Succ D65
+
+type D67
+  = Succ D66
+
+type D68
+  = Succ D67
+
+type D69
+  = Succ D68
+
+type D70
+  = Succ D69
+
+type D71
+  = Succ D70
+
+type D72
+  = Succ D71
+
+type D73
+  = Succ D72
+
+type D74
+  = Succ D73
+
+type D75
+  = Succ D74
+
+type D76
+  = Succ D75
+
+type D77
+  = Succ D76
+
+type D78
+  = Succ D77
+
+type D79
+  = Succ D78
+
+type D80
+  = Succ D79
+
+type D81
+  = Succ D80
+
+type D82
+  = Succ D81
+
+type D83
+  = Succ D82
+
+type D84
+  = Succ D83
+
+type D85
+  = Succ D84
+
+type D86
+  = Succ D85
+
+type D87
+  = Succ D86
+
+type D88
+  = Succ D87
+
+type D89
+  = Succ D88
+
+type D90
+  = Succ D89
+
+type D91
+  = Succ D90
+
+type D92
+  = Succ D91
+
+type D93
+  = Succ D92
+
+type D94
+  = Succ D93
+
+type D95
+  = Succ D94
+
+type D96
+  = Succ D95
+
+type D97
+  = Succ D96
+
+type D98
+  = Succ D97
+
+type D99
+  = Succ D98
+
+type D100
+  = Succ D99
 
 d0 :: forall proxy. proxy D0
 d0 = unsafeCoerce unit

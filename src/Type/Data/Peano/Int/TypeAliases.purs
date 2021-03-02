@@ -5,108 +5,308 @@ import Type.Data.Peano.Int.Definition (Neg, Pos)
 import Type.Data.Peano.Nat.TypeAliases (D0, D1, D10, D100, D11, D12, D13, D14, D15, D16, D17, D18, D19, D2, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D3, D30, D31, D32, D33, D34, D35, D36, D37, D38, D39, D4, D40, D41, D42, D43, D44, D45, D46, D47, D48, D49, D5, D50, D51, D52, D53, D54, D55, D56, D57, D58, D59, D6, D60, D61, D62, D63, D64, D65, D66, D67, D68, D69, D7, D70, D71, D72, D73, D74, D75, D76, D77, D78, D79, D8, D80, D81, D82, D83, D84, D85, D86, D87, D88, D89, D9, D90, D91, D92, D93, D94, D95, D96, D97, D98, D99)
 import Unsafe.Coerce
 
+type P0
+  = Pos D0
 
-type P0  = Pos D0
-type P1  = Pos D1
-type P2  = Pos D2
-type P3  = Pos D3
-type P4  = Pos D4
-type P5  = Pos D5
-type P6  = Pos D6
-type P7  = Pos D7
-type P8  = Pos D8
-type P9  = Pos D9
-type P10 = Pos D10
-type P11 = Pos D11
-type P12 = Pos D12
-type P13 = Pos D13
-type P14 = Pos D14
-type P15 = Pos D15
-type P16 = Pos D16
-type P17 = Pos D17
-type P18 = Pos D18
-type P19 = Pos D19
-type P20 = Pos D20
-type P21 = Pos D21
-type P22 = Pos D22
-type P23 = Pos D23
-type P24 = Pos D24
-type P25 = Pos D25
-type P26 = Pos D26
-type P27 = Pos D27
-type P28 = Pos D28
-type P29 = Pos D29
-type P30 = Pos D30
-type P31 = Pos D31
-type P32 = Pos D32
-type P33 = Pos D33
-type P34 = Pos D34
-type P35 = Pos D35
-type P36 = Pos D36
-type P37 = Pos D37
-type P38 = Pos D38
-type P39 = Pos D39
-type P40 = Pos D40
-type P41 = Pos D41
-type P42 = Pos D42
-type P43 = Pos D43
-type P44 = Pos D44
-type P45 = Pos D45
-type P46 = Pos D46
-type P47 = Pos D47
-type P48 = Pos D48
-type P49 = Pos D49
-type P50 = Pos D50
-type P51 = Pos D51
-type P52 = Pos D52
-type P53 = Pos D53
-type P54 = Pos D54
-type P55 = Pos D55
-type P56 = Pos D56
-type P57 = Pos D57
-type P58 = Pos D58
-type P59 = Pos D59
-type P60 = Pos D60
-type P61 = Pos D61
-type P62 = Pos D62
-type P63 = Pos D63
-type P64 = Pos D64
-type P65 = Pos D65
-type P66 = Pos D66
-type P67 = Pos D67
-type P68 = Pos D68
-type P69 = Pos D69
-type P70 = Pos D70
-type P71 = Pos D71
-type P72 = Pos D72
-type P73 = Pos D73
-type P74 = Pos D74
-type P75 = Pos D75
-type P76 = Pos D76
-type P77 = Pos D77
-type P78 = Pos D78
-type P79 = Pos D79
-type P80 = Pos D80
-type P81 = Pos D81
-type P82 = Pos D82
-type P83 = Pos D83
-type P84 = Pos D84
-type P85 = Pos D85
-type P86 = Pos D86
-type P87 = Pos D87
-type P88 = Pos D88
-type P89 = Pos D89
-type P90 = Pos D90
-type P91 = Pos D91
-type P92 = Pos D92
-type P93 = Pos D93
-type P94 = Pos D94
-type P95 = Pos D95
-type P96 = Pos D96
-type P97 = Pos D97
-type P98 = Pos D98
-type P99 = Pos D99
-type P100 = Pos D100
+type P1
+  = Pos D1
+
+type P2
+  = Pos D2
+
+type P3
+  = Pos D3
+
+type P4
+  = Pos D4
+
+type P5
+  = Pos D5
+
+type P6
+  = Pos D6
+
+type P7
+  = Pos D7
+
+type P8
+  = Pos D8
+
+type P9
+  = Pos D9
+
+type P10
+  = Pos D10
+
+type P11
+  = Pos D11
+
+type P12
+  = Pos D12
+
+type P13
+  = Pos D13
+
+type P14
+  = Pos D14
+
+type P15
+  = Pos D15
+
+type P16
+  = Pos D16
+
+type P17
+  = Pos D17
+
+type P18
+  = Pos D18
+
+type P19
+  = Pos D19
+
+type P20
+  = Pos D20
+
+type P21
+  = Pos D21
+
+type P22
+  = Pos D22
+
+type P23
+  = Pos D23
+
+type P24
+  = Pos D24
+
+type P25
+  = Pos D25
+
+type P26
+  = Pos D26
+
+type P27
+  = Pos D27
+
+type P28
+  = Pos D28
+
+type P29
+  = Pos D29
+
+type P30
+  = Pos D30
+
+type P31
+  = Pos D31
+
+type P32
+  = Pos D32
+
+type P33
+  = Pos D33
+
+type P34
+  = Pos D34
+
+type P35
+  = Pos D35
+
+type P36
+  = Pos D36
+
+type P37
+  = Pos D37
+
+type P38
+  = Pos D38
+
+type P39
+  = Pos D39
+
+type P40
+  = Pos D40
+
+type P41
+  = Pos D41
+
+type P42
+  = Pos D42
+
+type P43
+  = Pos D43
+
+type P44
+  = Pos D44
+
+type P45
+  = Pos D45
+
+type P46
+  = Pos D46
+
+type P47
+  = Pos D47
+
+type P48
+  = Pos D48
+
+type P49
+  = Pos D49
+
+type P50
+  = Pos D50
+
+type P51
+  = Pos D51
+
+type P52
+  = Pos D52
+
+type P53
+  = Pos D53
+
+type P54
+  = Pos D54
+
+type P55
+  = Pos D55
+
+type P56
+  = Pos D56
+
+type P57
+  = Pos D57
+
+type P58
+  = Pos D58
+
+type P59
+  = Pos D59
+
+type P60
+  = Pos D60
+
+type P61
+  = Pos D61
+
+type P62
+  = Pos D62
+
+type P63
+  = Pos D63
+
+type P64
+  = Pos D64
+
+type P65
+  = Pos D65
+
+type P66
+  = Pos D66
+
+type P67
+  = Pos D67
+
+type P68
+  = Pos D68
+
+type P69
+  = Pos D69
+
+type P70
+  = Pos D70
+
+type P71
+  = Pos D71
+
+type P72
+  = Pos D72
+
+type P73
+  = Pos D73
+
+type P74
+  = Pos D74
+
+type P75
+  = Pos D75
+
+type P76
+  = Pos D76
+
+type P77
+  = Pos D77
+
+type P78
+  = Pos D78
+
+type P79
+  = Pos D79
+
+type P80
+  = Pos D80
+
+type P81
+  = Pos D81
+
+type P82
+  = Pos D82
+
+type P83
+  = Pos D83
+
+type P84
+  = Pos D84
+
+type P85
+  = Pos D85
+
+type P86
+  = Pos D86
+
+type P87
+  = Pos D87
+
+type P88
+  = Pos D88
+
+type P89
+  = Pos D89
+
+type P90
+  = Pos D90
+
+type P91
+  = Pos D91
+
+type P92
+  = Pos D92
+
+type P93
+  = Pos D93
+
+type P94
+  = Pos D94
+
+type P95
+  = Pos D95
+
+type P96
+  = Pos D96
+
+type P97
+  = Pos D97
+
+type P98
+  = Pos D98
+
+type P99
+  = Pos D99
+
+type P100
+  = Pos D100
 
 p0 :: forall proxy. proxy P0
 p0 = unsafeCoerce unit
@@ -411,109 +611,308 @@ p99 = unsafeCoerce unit
 p100 :: forall proxy. proxy P100
 p100 = unsafeCoerce unit
 
+type N0
+  = Neg D0
 
-type N0  = Neg D0
-type N1  = Neg D1
-type N2  = Neg D2
-type N3  = Neg D3
-type N4  = Neg D4
-type N5  = Neg D5
-type N6  = Neg D6
-type N7  = Neg D7
-type N8  = Neg D8
-type N9  = Neg D9
-type N10 = Neg D10
-type N11 = Neg D11
-type N12 = Neg D12
-type N13 = Neg D13
-type N14 = Neg D14
-type N15 = Neg D15
-type N16 = Neg D16
-type N17 = Neg D17
-type N18 = Neg D18
-type N19 = Neg D19
-type N20 = Neg D20
-type N21 = Neg D21
-type N22 = Neg D22
-type N23 = Neg D23
-type N24 = Neg D24
-type N25 = Neg D25
-type N26 = Neg D26
-type N27 = Neg D27
-type N28 = Neg D28
-type N29 = Neg D29
-type N30 = Neg D30
-type N31 = Neg D31
-type N32 = Neg D32
-type N33 = Neg D33
-type N34 = Neg D34
-type N35 = Neg D35
-type N36 = Neg D36
-type N37 = Neg D37
-type N38 = Neg D38
-type N39 = Neg D39
-type N40 = Neg D40
-type N41 = Neg D41
-type N42 = Neg D42
-type N43 = Neg D43
-type N44 = Neg D44
-type N45 = Neg D45
-type N46 = Neg D46
-type N47 = Neg D47
-type N48 = Neg D48
-type N49 = Neg D49
-type N50 = Neg D50
-type N51 = Neg D51
-type N52 = Neg D52
-type N53 = Neg D53
-type N54 = Neg D54
-type N55 = Neg D55
-type N56 = Neg D56
-type N57 = Neg D57
-type N58 = Neg D58
-type N59 = Neg D59
-type N60 = Neg D60
-type N61 = Neg D61
-type N62 = Neg D62
-type N63 = Neg D63
-type N64 = Neg D64
-type N65 = Neg D65
-type N66 = Neg D66
-type N67 = Neg D67
-type N68 = Neg D68
-type N69 = Neg D69
-type N70 = Neg D70
-type N71 = Neg D71
-type N72 = Neg D72
-type N73 = Neg D73
-type N74 = Neg D74
-type N75 = Neg D75
-type N76 = Neg D76
-type N77 = Neg D77
-type N78 = Neg D78
-type N79 = Neg D79
-type N80 = Neg D80
-type N81 = Neg D81
-type N82 = Neg D82
-type N83 = Neg D83
-type N84 = Neg D84
-type N85 = Neg D85
-type N86 = Neg D86
-type N87 = Neg D87
-type N88 = Neg D88
-type N89 = Neg D89
-type N90 = Neg D90
-type N91 = Neg D91
-type N92 = Neg D92
-type N93 = Neg D93
-type N94 = Neg D94
-type N95 = Neg D95
-type N96 = Neg D96
-type N97 = Neg D97
-type N98 = Neg D98
-type N99 = Neg D99
-type N100 = Neg D100
+type N1
+  = Neg D1
 
+type N2
+  = Neg D2
+
+type N3
+  = Neg D3
+
+type N4
+  = Neg D4
+
+type N5
+  = Neg D5
+
+type N6
+  = Neg D6
+
+type N7
+  = Neg D7
+
+type N8
+  = Neg D8
+
+type N9
+  = Neg D9
+
+type N10
+  = Neg D10
+
+type N11
+  = Neg D11
+
+type N12
+  = Neg D12
+
+type N13
+  = Neg D13
+
+type N14
+  = Neg D14
+
+type N15
+  = Neg D15
+
+type N16
+  = Neg D16
+
+type N17
+  = Neg D17
+
+type N18
+  = Neg D18
+
+type N19
+  = Neg D19
+
+type N20
+  = Neg D20
+
+type N21
+  = Neg D21
+
+type N22
+  = Neg D22
+
+type N23
+  = Neg D23
+
+type N24
+  = Neg D24
+
+type N25
+  = Neg D25
+
+type N26
+  = Neg D26
+
+type N27
+  = Neg D27
+
+type N28
+  = Neg D28
+
+type N29
+  = Neg D29
+
+type N30
+  = Neg D30
+
+type N31
+  = Neg D31
+
+type N32
+  = Neg D32
+
+type N33
+  = Neg D33
+
+type N34
+  = Neg D34
+
+type N35
+  = Neg D35
+
+type N36
+  = Neg D36
+
+type N37
+  = Neg D37
+
+type N38
+  = Neg D38
+
+type N39
+  = Neg D39
+
+type N40
+  = Neg D40
+
+type N41
+  = Neg D41
+
+type N42
+  = Neg D42
+
+type N43
+  = Neg D43
+
+type N44
+  = Neg D44
+
+type N45
+  = Neg D45
+
+type N46
+  = Neg D46
+
+type N47
+  = Neg D47
+
+type N48
+  = Neg D48
+
+type N49
+  = Neg D49
+
+type N50
+  = Neg D50
+
+type N51
+  = Neg D51
+
+type N52
+  = Neg D52
+
+type N53
+  = Neg D53
+
+type N54
+  = Neg D54
+
+type N55
+  = Neg D55
+
+type N56
+  = Neg D56
+
+type N57
+  = Neg D57
+
+type N58
+  = Neg D58
+
+type N59
+  = Neg D59
+
+type N60
+  = Neg D60
+
+type N61
+  = Neg D61
+
+type N62
+  = Neg D62
+
+type N63
+  = Neg D63
+
+type N64
+  = Neg D64
+
+type N65
+  = Neg D65
+
+type N66
+  = Neg D66
+
+type N67
+  = Neg D67
+
+type N68
+  = Neg D68
+
+type N69
+  = Neg D69
+
+type N70
+  = Neg D70
+
+type N71
+  = Neg D71
+
+type N72
+  = Neg D72
+
+type N73
+  = Neg D73
+
+type N74
+  = Neg D74
+
+type N75
+  = Neg D75
+
+type N76
+  = Neg D76
+
+type N77
+  = Neg D77
+
+type N78
+  = Neg D78
+
+type N79
+  = Neg D79
+
+type N80
+  = Neg D80
+
+type N81
+  = Neg D81
+
+type N82
+  = Neg D82
+
+type N83
+  = Neg D83
+
+type N84
+  = Neg D84
+
+type N85
+  = Neg D85
+
+type N86
+  = Neg D86
+
+type N87
+  = Neg D87
+
+type N88
+  = Neg D88
+
+type N89
+  = Neg D89
+
+type N90
+  = Neg D90
+
+type N91
+  = Neg D91
+
+type N92
+  = Neg D92
+
+type N93
+  = Neg D93
+
+type N94
+  = Neg D94
+
+type N95
+  = Neg D95
+
+type N96
+  = Neg D96
+
+type N97
+  = Neg D97
+
+type N98
+  = Neg D98
+
+type N99
+  = Neg D99
+
+type N100
+  = Neg D100
 
 n0 :: forall proxy. proxy N0
 n0 = unsafeCoerce unit

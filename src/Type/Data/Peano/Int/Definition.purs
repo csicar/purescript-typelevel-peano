@@ -27,7 +27,8 @@ foreign import data Pos :: Nat -> Int
 -- |
 foreign import data Neg :: Nat -> Int
 
-data IProxy (i :: Int) = IProxy
+data IProxy (i :: Int)
+  = IProxy
 
 class IsInt (i :: Int) where
   -- | reflect a type-level Int to a value-level Int
@@ -104,8 +105,7 @@ instance productNegNeg :: ProductInt (Pos a) (Pos b) (Pos c) => ProductInt (Neg 
 instance productZ :: ProductInt (Pos Z) a (Pos Z)
 else instance product1 :: ProductInt (Pos (Succ Z)) a a
 else instance productNegPos :: ProductInt (Pos a) (Pos b) (Pos c) => ProductInt (Pos a) (Neg b) (Neg c)
-else -- (1 + a) * b = b + (a * b)
-instance productSucc :: (ProductInt (Pos a) b ab, SumInt ab b result) => ProductInt (Pos (Succ a)) b result
+else -- (1 + a) * b = b + (a * b) instance productSucc :: (ProductInt (Pos a) b ab, SumInt ab b result) => ProductInt (Pos (Succ a)) b result
 
 prod :: ∀ proxy a b c. ProductInt a b c => proxy a -> proxy b -> proxy c
 prod _ _ = unsafeCoerce unit

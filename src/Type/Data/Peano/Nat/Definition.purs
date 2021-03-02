@@ -14,7 +14,8 @@ foreign import data Z :: Nat
 -- | Represents Successor of a Nat: `(Succ a) ^= 1 + a`
 foreign import data Succ :: Nat -> Nat
 
-data NProxy (n :: Nat) = NProxy
+data NProxy (n :: Nat)
+  = NProxy
 
 class IsNat (a :: Nat) where
   -- | reflect typelevel Nat to a valuelevel Int
@@ -58,8 +59,7 @@ instance productZ' :: ProductNat Z a Z
 
 --| 1 * a = a
 instance product1' ∷ ProductNat (Succ Z) a a
-else 
---| (1 + a) * b = b + a * b
+else --| (1 + a) * b = b + a * b
 instance productSucc :: (ProductNat a b ab, SumNat ab b result) => ProductNat (Succ a) b result
 
 mulNat :: ∀ proxy a b c. ProductNat a b c => proxy a -> proxy b -> proxy c
@@ -95,12 +95,10 @@ instance isZeroZ :: IsZeroNat Z True
 
 instance isZeroSucc :: IsZeroNat (Succ a) False
 
-
 -- Predecesor
-
 class Pred (a :: Nat) (b :: Nat) | a -> b, b -> a
 
 instance predOfSucc ∷ Pred (Succ a) a
 
-pred :: ∀ proxy a.  (proxy (Succ a)) -> proxy a
+pred :: ∀ proxy a. (proxy (Succ a)) -> proxy a
 pred _ = unsafeCoerce unit
