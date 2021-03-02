@@ -13,5 +13,7 @@ You can edit this file as you like.
   , "unsafe-coerce"
   ]
 , packages = ./packages.dhall
+, license = "MIT"
+, repository = "https://github.com/csicar/purescript-typelevel-peano"
 , sources = [ "src/**/*.purs" ]
 }
