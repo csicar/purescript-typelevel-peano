@@ -1,7 +1,6 @@
 module Test.Main where
 
 import Prelude
-
 import Data.Symbol (SProxy(..))
 import Effect (Effect)
 import Effect.Console (logShow)
@@ -9,7 +8,6 @@ import Type.Data.Peano (D0, D1, D10, D100, D2, D3, D4, D5, D6, D64, D9, N2, N4, 
 import Type.Data.Peano as Peano
 import Type.Proxy (Proxy(..))
 import Unsafe.Coerce (unsafeCoerce)
-
 
 two :: Proxy (Pos (Succ (Succ Z)))
 two = Proxy
@@ -24,7 +22,6 @@ minusZero :: Proxy (Neg Z)
 minusZero = Proxy
 
 -- Test Add
-
 t1 :: Proxy (Pos (Succ (Succ (Succ Z))))
 t1 = p1 `plus` two
 
