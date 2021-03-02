@@ -13,14 +13,14 @@ build:
 
 test:
   script:
-    - ls
-    - spago test
+    - spago -x test.dhall test
 
 test-doctest:
   script:
-    - spago build
-    - spago sources
-    - shopt -s globstar && purepur -o doctest --src ./src --src ./README.md $(spago sources)
+    - echo "TODO"
+    # - spago build
+    # - spago sources
+    # - shopt -s globstar && purepur -o doctest --src ./src --src ./README.md $(spago sources)
     # - spago run -x 
 
 lint:
