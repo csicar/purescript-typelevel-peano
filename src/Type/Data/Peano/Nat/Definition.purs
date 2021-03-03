@@ -1,3 +1,10 @@
+--| ```purescript run
+--| > -- To use this module, import the following:
+--| > import Type.Proxy (Proxy(..))
+--| > import Type.Data.Peano.Nat (D5, D8, D10, d2, d3, d9)
+--| > import Type.Data.Peano.Nat as Nat
+--| ```
+-- |
 module Type.Data.Peano.Nat.Definition where
 
 import Prelude (show, unit, (+), (<<<), class Show)
@@ -14,6 +21,7 @@ foreign import data Z :: Nat
 -- | Represents Successor of a Nat: `(Succ a) ^= 1 + a`
 foreign import data Succ :: Nat -> Nat
 
+-- | Deprecared. Use `Proxy` instead
 data NProxy (n :: Nat)
   = NProxy
 
@@ -21,10 +29,12 @@ class IsNat (a :: Nat) where
   -- | reflect typelevel Nat to a valuelevel Int
   -- |
   -- |
-  -- | ```purescript
-  -- | reflectNat (Proxy  :: _ D10) = 10
-  -- | reflectNat (NProxy :: _ D10) = 10
-  -- | ```
+  -- |
+  --| ```purescript run
+  --| > import Type.Data.Peano.Nat (reflectNat)
+  --| > reflectNat (Proxy  :: Proxy D10)
+  --| 10
+  --| ```
   reflectNat :: forall proxy. proxy a -> Int
 
 instance isNatZ ∷ IsNat Z where
@@ -47,6 +57,12 @@ instance addZ ∷ SumNat a Z a
 else instance addZ' ∷ SumNat Z a a
 else instance addSucc :: SumNat a b c => SumNat (Succ a) b (Succ c)
 
+--| ```purescript
+--| > import Type.Data.Peano.Nat (plusNat)
+--| > plusNat d2 d3
+--| Proxy D5
+--| ```
+-- |
 plusNat :: ∀ proxy a b c. SumNat a b c => proxy a -> proxy b -> proxy c
 plusNat _ _ = unsafeCoerce unit
 
@@ -72,9 +88,10 @@ instance exponentiationZ :: ExponentiationNat a Z (Succ Z)
 
 instance exponentiationSucc :: (ExponentiationNat a b ab, ProductNat ab a result) => ExponentiationNat a (Succ b) result
 
---| ```purescript
---| > powNat d2 d3
---| 8 -- : NProxy D8
+--| ```purescript run
+--| > import Type.Data.Peano.Nat (powNat)
+--| > :t powNat d2 d3
+--| Proxy D8
 --| ```
 -- | a raised to the power of b `a^b = c`
 powNat :: ∀ proxy a b c. ExponentiationNat a b c => proxy a -> proxy b -> proxy c
@@ -100,5 +117,11 @@ class Pred (a :: Nat) (b :: Nat) | a -> b, b -> a
 
 instance predOfSucc ∷ Pred (Succ a) a
 
+--| ```purescript run
+--| > import Type.Data.Peano.Nat (pred)
+--| > :t pred d9
+--| Proxy D8
+--| ```
+-- |
 pred :: ∀ proxy a. (proxy (Succ a)) -> proxy a
 pred _ = unsafeCoerce unit
