@@ -11,7 +11,7 @@ import Unsafe.Coerce (unsafeCoerce)
 -- | Note: Pos Z and Neg Z both represent 0
 data Int
 
--- | Represents a posivite number
+-- | Represents a positive number
 -- |
 -- | ```purescript
 -- | Pos (Succ Z) ^= + 1
