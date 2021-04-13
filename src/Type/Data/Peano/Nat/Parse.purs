@@ -1,10 +1,11 @@
 module Type.Data.Peano.Nat.Parse where
 
 import Prelude (unit)
-import Type.Data.Peano.Nat.Definition (class ProductNat, class SumNat, class ExponentiationNat, Succ, Z, Nat)
-import Type.Data.Peano.Nat.TypeAliases (D10)
 import Prim (Symbol)
 import Prim.Symbol as Symbol
+import Prim.TypeError (class Fail, Text)
+import Type.Data.Peano.Nat.Definition (class ProductNat, class SumNat, class ExponentiationNat, Succ, Z, Nat)
+import Type.Data.Peano.Nat.TypeAliases (D10)
 import Unsafe.Coerce (unsafeCoerce)
 
 class Length (sym :: Symbol) (nat :: Nat) | sym -> nat
@@ -37,8 +38,8 @@ else instance parseLit8 :: ParseNat "8" (Succ (Succ (Succ (Succ (Succ (Succ (Suc
 else instance parseLit9 :: ParseNat "9" (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))
 -- head : tail
 else instance parseCons ::
-  ( ParseNat head msd
-  , Symbol.Cons head tail sym
+  ( Symbol.Cons head tail sym
+  , ParseNat head msd
   , Length tail symLength
   , ExponentiationNat D10 symLength offset
   , ProductNat offset msd high
