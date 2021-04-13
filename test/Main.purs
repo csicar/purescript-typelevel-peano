@@ -152,6 +152,21 @@ t35 = parseInt (unsafeCoerce unit :: sproxy "-2")
 t36 :: forall (sproxy :: Symbol -> Type) (proxy :: Peano.Nat -> Type). proxy D2
 t36 = parseNat (unsafeCoerce unit :: sproxy "2")
 
+t37 :: forall (sproxy :: Symbol -> Type) (proxy :: Peano.Nat -> Type). proxy (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Z)))))))))))))
+t37 = parseNat (unsafeCoerce unit :: sproxy "13")
+
+-- Test backwards operation. I.e. using `parseNat` to get the Symbol from a Nat
+t38 :: _ -> Proxy D2
+t38 = parseNat
+
+-- -- This should fail to typecheck:
+-- t39 :: Proxy (Succ _)
+-- t39 = parseNat (Proxy :: Proxy "-1")
+-- -- This should fail to typecheck:
+-- t40 :: Proxy (Succ _)
+-- t40 = parseNat (Proxy :: Proxy "")
+-- -- This should fail to typecheck:
+-- t41 = parseInt (Proxy :: Proxy "nan")
 main :: Effect Unit
 main = do
   logShow t26
