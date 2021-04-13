@@ -162,12 +162,11 @@ t38 = parseNat
 -- -- This should fail to typecheck:
 -- t39 :: Proxy (Succ _)
 -- t39 = parseNat (Proxy :: Proxy "-1")
-
-
 -- -- This should fail to typecheck:
 -- t40 :: Proxy (Succ _)
 -- t40 = parseNat (Proxy :: Proxy "")
-
+-- -- This should fail to typecheck:
+-- t41 = parseInt (Proxy :: Proxy "nan")
 main :: Effect Unit
 main = do
   logShow t26
